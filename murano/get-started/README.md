@@ -19,25 +19,24 @@ At the end of each getting-started guide, you should have either a physical or s
 
 * Remotely controllable 
 
-<table>
-  <tr>
-    <td>Murano Products - Getting-started Example Templates</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>![Python Simulator](assets/sim.png)</td>
-    <td>[Simulate a Device Using a Python Script](products/pythonsim)</td>
-  </tr>
-  <tr>
-    <td>![IoT Thing Dev](assets/iotthing.png)</td>
-    <td>[Use an IoT Thing Dev board by Sparkfun - Arduino-Based Example Code and Hook-up Guide](products/esp8266_thingdev_murano_smart_lightbulb)</td>
-  </tr>
-  <tr>
-    <td>![Manual](assets/manual.png)</td>
-    <td>[Manually Activate and Write Data using API Commands](products/manualdevice)</td>
-  </tr>
+<table width="100%">
+    <tr>
+      <th colspan="2" style="font-weight: bold;">Murano Products - Getting-started Example Templates</th>
+    </tr>
+    	<tr>
+        <td style="text-align: center;">![Python Simulator](assets/sim.png)</td>
+        <td style="width:80%;padding-top:40px;padding-bottom:40px;">[Simulate a Device Using a Python Script](products/pythonsim)</td>
+    </tr>
+	<tr>
+        <td style="text-align: center;">![IoT Thing Dev](assets/iotthing.png)</td>
+        <td style="width:80%;padding-top:40px;padding-bottom:40px;">[Use an IoT Thing Dev board by Sparkfun - Arduino-Based Example Code and Hook-up Guide](products/esp8266_thingdev_murano_smart_lightbulb)</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">![Manual](assets/manual.png)</td>
+        <td style="width:80%;padding-top:40px;padding-bottom:40px;">[Manually Activate and Write Data using API Commands](products/manualdevice)</td>
+    </tr>
+    
 </table>
-
 
 ## CREATE A SOLUTION
 
@@ -53,13 +52,12 @@ At the end of this getting-started guide, you should have a deployed web applica
 
 * Ability for users to invite a shared user to access the lightbulb
 
-<table>
-  <tr>
-    <td>Murano Solution - Getting-started Example Templates</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>![Consumer Example App](assets/lightapp.png)</td>
-    <td>[Create a Murano Solution Application](solutions/exampleapp)</td>
-  </tr>
-</table> 
+<table width="100%">
+    <tr>
+      <th colspan="2" style="font-weight: bold;">Murano Solution - Getting-started Example Templates</th>
+    </tr>
+    <tr>
+        <td style="text-align: center;">![Consumer Example App](assets/lightapp.png)</td>
+        <td style="width:80%;padding-top:40px;padding-bottom:40px;">[Create a Murano Solution Application](solutions/exampleapp)</td>
+    </tr>
+</table>    
