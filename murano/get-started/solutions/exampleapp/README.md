@@ -12,7 +12,7 @@ This is a getting-started guide for using Exosite Murano Solutions.  When you ar
 * Real Time Device Data
 * Device Control
 
-If you already have a Murano account, let's get started! If not,
+If you already have a Murano account, we can get started. If not,
 <a class="btn orange" href="https://exosite.com/business/signup">Sign Up for Beta Access to Murano</a>.
 
 
@@ -69,13 +69,13 @@ If you used the Home Automation Example, it should look like this:
 
 After signing up, click on the email verification link, then login.
 
-In the new web app, add a lightbulb using the identity of the device you added earlier (e.g., if you <a href="../../products/pythonsim/" target="_blank">simulated a device using a Python script</a>, your device identity would most likely be "000001"). <div style="background-color: #00BCD6; display: inline-block;">NOTE: If you haven't added a device yet, it will throw an error.</div>
+In the new web app, add a lightbulb using the identity of the device you added earlier (e.g., if you <a href="../../products/pythonsim/" target="_blank">simulated a device using a Python script</a>, your device identity would most likely be "000001"). Click *ADD*. <div style="background-color: #00BCD6; display: inline-block;">NOTE: If you haven't added a device yet, it will throw an error.</div>
 
-You should see data from the lightbulb—current humidity, temperature, and whether it's on or off. Note: If you simulated a device using the Python Script, keep the script running so data will continue to flow into the application. It should look like this:
+Click to open your device. You should see data from the lightbulb—current humidity, temperature, and whether it's on or off. Note: If you simulated a device using the Python Script, keep the script running so data will continue to flow into the application. It should look like this:
 ![Example app - lightbulb added](assets/solution_example_app_with_lightbulb.png)
 
 
-**Congratulations, you've connected a device to your web app and are seeing live data.**
+**Congratulations—you've connected a device to your web app and are seeing live data.**
 
 
 # ADVANCED: DEPLOY CHANGES TO THE EXAMPLE SOLUTION 
