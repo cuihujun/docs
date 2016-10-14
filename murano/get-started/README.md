@@ -5,9 +5,9 @@ template: default
 
 # Getting Started with Murano
 
-Exosite provides example templates to help you quickly create Products and Solutions on Murano. This includes everything you need to set up a Product, connect a physical device (or device simulator), interact with device data on a custom dashboard, and deploy a fully customizable front-end web application Solution. When finished, you will have a complete end-to-end IoT application deployed on Exosite’s Murano platform.
+Exosite provides example templates to help you quickly create products and solutions on Murano. This includes everything you need to set up a product, connect a physical device (or device simulator), interact with device data on a custom dashboard, and deploy a fully customizable front-end web application solution. When finished, you will have a complete end-to-end IoT application deployed on Exosite’s Murano platform.
 
-## CREATE A PRODUCT
+# Create a Product
 
 In this section, you will create a connected lightbulb from the provided example templates. Choose an example template below based on whether you will use software-simulated devices, a SparkFun ESP8266 Thing Dev Board, or manual API commands. 
 
@@ -38,7 +38,7 @@ At the end of each getting-started guide, you should have either a physical or s
     
 </table>
 
-## CREATE A SOLUTION
+# Create a Solution
 
 In this section, you will clone and deploy an example consumer application for the connected lightbulb you created in the previous section. The example consumer application templates below provide all the source code and configuration necessary to complete this task.  
 
