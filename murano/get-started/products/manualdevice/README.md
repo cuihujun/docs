@@ -5,7 +5,7 @@ template: default
 
 # Getting-started Guide: Manually Activate a Connected Lightbulb Device Using APIs
 
-In this getting-started guide, you will manually activate a device to act as a connected lightbulb using API calls. 
+In this guide, you will manually activate a device to act as a connected lightbulb using API calls. 
 
 **NOTE:** This simulator script uses the [Device HTTP API](https://github.com/exosite/docs/blob/master/murano/products/device_api/http).
 
