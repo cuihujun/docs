@@ -52,7 +52,7 @@ In this section, you will create and activate a device under your Product in Mur
 
     4. Enter a name for the device in the *Name* field. This will only be used to help you distinguish between devices.  
 
-    5. Enter a serial number or device identifier in the *Identity* field. For the purpose of this example, we’ll use 000001.
+    5. Enter a serial number or device identifier in the *Identity* field. For the purpose of this example, you can use 000001.
 
     6. Click Create.
 
