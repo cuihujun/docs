@@ -5,7 +5,7 @@ template: default
 
 # Getting Started with Murano
 
-Exosite provides example templates to help you quickly create products and solutions on Murano. This includes everything you need to set up a product, connect a physical device (or device simulator), interact with device data on a custom dashboard, and deploy a fully customizable front-end web application solution. When finished, you will have a complete end-to-end IoT application deployed on Exosite’s Murano platform.
+Exosite provides example templates to help you quickly create Products and Solutions on Murano. This includes everything you need to set up a Product, connect a physical device (or device simulator), interact with device data on a custom dashboard, and deploy a fully customizable front-end web application Solution. When finished, you will have a complete end-to-end IoT application deployed on Exosite’s Murano platform.
 
 # Create a Product
 
