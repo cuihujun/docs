@@ -15,7 +15,7 @@ Devices need two pieces of information to activate with the platform. These are 
 
 # Hardware Setup
 
-This example does not require any hardware. It assumes developers will use command line CURL commands or implement in a language of choice using HTTP client library commands.
+This example does not require hardware. It assumes developers will use command line CURL commands or implement in a language of choice using HTTP client library commands.
 
 # Software Setup
 
