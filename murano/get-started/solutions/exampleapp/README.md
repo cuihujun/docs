@@ -174,7 +174,7 @@ Your changes have now been deployed:
   ![image alt text](exampleapp_13.png)
 
 
-3. Then CD to the home-automation-example directory in the terminal, and paste this command:
+3. CD to the home-automation-example directory in the terminal, and paste this command:
   ```
   npm run start:dev
   ```
@@ -185,7 +185,7 @@ Your changes have now been deployed:
   ```
   npm run compile 
   ``` 
-6. Then deploy your solution changes to Exosite:
+6. Deploy your solution changes to Exosite:
   ```
   exosite --deploy 
   ```
@@ -199,6 +199,6 @@ You can now develop locally, compile your app, and push to the cloud.
 
 
 
-Next up (if you haven’t already):
+Next up (if you have not already):
 <a class="btn orange" href="http://docs.exosite.com/murano/get-started/">CREATE A PRODUCT >></a>
 <div style="padding-bottom: 300px"></div>
