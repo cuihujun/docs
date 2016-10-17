@@ -24,18 +24,16 @@ Create a solution using the home automation example as a starting point here:
 
 **NOTE:** You may have to delete your previous solution if you are on a free account.
 
-<!--![Select menu](assets/solution_select_menu.png)
-![Select solutions](assets/solution_select_menu_option.png) -->
-![+New Solution](assets/solution_add_new.png)
+![image alt text](exampleapp_1.png)
 
 Notice, the Home Automation Example will pull in a public GitHub repository. If you are using your own GitHub repository in the future, it will not be linked to your solution (e.g., push to your GitHub repository and see changes on your solution). It consumes the repository when creating the solution, and you can push changes using the <a href="../../../exosite-cli/" target="_blank">Exosite CLI</a>.
 
 
-![new solution](assets/new_solution.png)
+![image alt text](exampleapp_2.png)
 
 
 To verify the Template File worked, click the *ROUTES* menu item—you should see something like this: 
-![Routes Example](assets/routes_example.png)
+![image alt text](exampleapp_3.png)
 
 You have now created a custom API, owner and guest roles with device-level permissions, a responsive web app (which you will make changes to later), and an empty user database.
 
@@ -53,7 +51,7 @@ You can plug all types of services into your solution. Products are linked to yo
 4) Select the products you want to include in the solution <br />
 5) Hit *APPLY* <br />
 
-![Link product to solution](assets/solution_link_product.png)
+![image alt text](exampleapp_4.png)
 
 Your product is now linked to your solution and can be added as a device.
 
@@ -61,12 +59,12 @@ Your product is now linked to your solution and can be added as a device.
 # SIGN UP FOR A NEW ACCOUNT ON THE WEB APP
 
 1. Open your solution URL.
-  ![Open Solution Domain](assets/solution_open_domain_link.png)
+  ![image alt text](exampleapp_5.png)
 
 2. Sign up for an account on your new example app. <div style="background-color: #00BCD6; display: inline-block;">NOTE: You will not be able to login with your Exosite Murano credentials.</div> This is a totally separate application that you just deployed on the Murano platform, with a separate user database.
 
   If you used the Home Automation Example, it should look like this:
-  ![Example App Screenshot](assets/solution_home_automation_example_app.png)
+  ![image alt text](exampleapp_6.png)
 
 3. After signing up, click on the email verification link, then log in.
 
@@ -81,7 +79,7 @@ Your product is now linked to your solution and can be added as a device.
 5. Click to open your device. You should see data from the lightbulb—current humidity, temperature, and whether it is on or off. 
 
   **NOTE:** If you simulated a device using the Python Script, keep the script running so data will continue to flow into the application. It should look like this:
-![Example app - lightbulb added](assets/solution_example_app_with_lightbulb.png)
+![image alt text](exampleapp_7.png)
 
 
 Congratulations—you have connected a device to your web app and are seeing live data.
@@ -134,10 +132,10 @@ Congratulations—you have connected a device to your web app and are seeing liv
   ```
 
 6. Log in with your Exosite credentials, and enter your product and solution IDs (hint: try the typeahead).
-  ![cli login](assets/cli_login.png)
+  ![image alt text](exampleapp_8.png)
 
 7. Make a change to home-automation-example > app > components > Login.js. Change the text from “Login” to “Login HERE” to make sure changes are deployed.
-  ![rename login](assets/rename_login.png)
+  ![image alt text](exampleapp_9.png)
 
 8. Then compile your code:
   ```
@@ -150,12 +148,12 @@ Congratulations—you have connected a device to your web app and are seeing liv
   ```
 
 10. Open the URL (cmd/ctrl + click to open in default browser, or copy paste the link):
-  ![deploy change](assets/deploy_change.png)
+  ![image alt text](exampleapp_10.png)
 
 
 Your changes have now been deployed: 
 
-![Example app change](assets/solution_example_app_change.png)
+![image alt text](exampleapp_11.png)
 
 
 # SETTING UP LOCAL DEVELOPMENT
@@ -171,9 +169,9 @@ Your changes have now been deployed:
   ```
   {"title":"Local Debugging","hideComment":true,"headers":  [{"enabled":true,"name":"","value":"","comment":""}],"respHeaders":[{"enabled":true,"name":"Access-Control-Allow- Origin","value":"http://localhost:8080","comment":""},{"enabled":true,"name":"Access-Control-Allow- Credentials","value":"true","comment":""}],"filters":[],"appendMode":""}
   ```
-  ![Import Config](assets/import_config.png)
+  ![image alt text](exampleapp_12.png)
 
-  ![Import Profile](assets/import_profile.png)
+  ![image alt text](exampleapp_13.png)
 
 
 3. Then CD to the home-automation-example directory in the terminal, and paste this command:
