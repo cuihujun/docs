@@ -74,6 +74,10 @@ Your product is now linked to your solution and can be added as a device.
 
   **NOTE:** If you have not added a device yet, it will throw an error.
 
+  ![image alt text](exampleapp_A.png)
+  
+  ![image alt text](exampleapp_B.png)
+
 5. Click to open your device. You should see data from the lightbulb—current humidity, temperature, and whether it is on or off. 
 
   **NOTE:** If you simulated a device using the Python Script, keep the script running so data will continue to flow into the application. It should look like this:
