@@ -16,6 +16,17 @@ This is a getting-started guide for using Exosite Murano Solutions. In this guid
 If you already have a Murano account, you can get started. If not,
 <a class="btn orange" href="https://exosite.com/business/signup">Sign Up for Beta Access to Murano</a>.
 
+# Requirements
+
+## Hardware Setup
+
+No hardware is required to complete this guide.
+
+## Software Setup
+
+In order to complete this tutorial, you will need Git, node.js & npm, and Python & pip installed on your system. 
+
+**NOTE:** This is a technical tutorial. You will need some familiarity with your operating system’s terminal. 
 
 # CREATE A SOLUTION USING THE HOME AUTOMATION EXAMPLE
 
@@ -86,8 +97,6 @@ Congratulations—you have connected a device to your web app and are seeing liv
 
 
 # ADVANCED: DEPLOY CHANGES TO THE EXAMPLE SOLUTION 
-
-**NOTE:** This is a technical tutorial. You will need some familiarity with your operating system’s terminal. In order to complete this tutorial, you will need Git, node.js & npm, and Python & pip installed on your system. 
 
 1. Clone this GitHub repo: 
 
