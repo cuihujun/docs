@@ -60,7 +60,7 @@ You can plug all types of services into your solution. Products are linked to yo
 2) Select *Product* <br />
 3) Select the settings icon <br />
 4) Select the products you want to include in the solution <br />
-5) Hit *APPLY* <br />
+5) Click "APPLY" <br />
 
 ![image alt text](exampleapp_4.png)
 
@@ -72,14 +72,14 @@ Your product is now linked to your solution and can be added as a device.
 1. Open your solution URL.
   ![image alt text](exampleapp_5.png)
 
-2. Sign up for an account on your new example app. <div style="background-color: #00BCD6; display: inline-block;">NOTE: You will not be able to login with your Exosite Murano credentials.</div> This is a totally separate application that you just deployed on the Murano platform, with a separate user database.
+2. Sign up for an account on your new example app. <div style="background-color: #00BCD6; display: inline-block;">**NOTE:** You will not be able to login with your Exosite Murano credentials.</div> This is a totally separate application that you just deployed on the Murano platform, with a separate user database.
 
   If you used the Home Automation Example, it should look like this:
   ![image alt text](exampleapp_6.png)
 
 3. After signing up, click on the email verification link, then log in.
 
-4. In the new web app, add a lightbulb using the identity of the device you added earlier (e.g., if you <a href="../../products/pythonsim/" target="_blank">simulated a device using a Python script</a>, your device identity would most likely be "000001"). Click *ADD*. 
+4. In the new web app, add a lightbulb using the identity of the device you added earlier (e.g., if you <a href="../../products/pythonsim/" target="_blank">simulated a device using a Python script</a>, your device identity would most likely be "000001"). Click "ADD." 
 
   **NOTE:** If you have not added a device yet, it will throw an error.
 
@@ -143,15 +143,15 @@ Congratulations—you have connected a device to your web app and are seeing liv
 6. Log in with your Exosite credentials, and enter your product and solution IDs (hint: try the typeahead).
   ![image alt text](exampleapp_8.png)
 
-7. Make a change to home-automation-example > app > components > Login.js. Change the text from “Login” to “Login HERE” to make sure changes are deployed.
+7. Make a change to *home-automation-example > app > components > Login.js*. Change the text from “Login” to “Login HERE” to make sure changes are deployed.
   ![image alt text](exampleapp_9.png)
 
-8. Then compile your code:
+8. Compile your code:
   ```
   npm run compile
   ```
 
-9. And deploy your solution from the top-level directory (you may need to CD back up to home-automation-example directory):
+9. Deploy your solution from the top-level directory (you may need to CD back up to *home-automation-example* directory):
   ```
   exosite --deploy
   ```
@@ -171,7 +171,7 @@ Your changes have now been deployed:
 
   API_BASE_URL=https://<solution-name>.apps.exosite-dev.io
 
-  **NOTE:** The Chrome plugin in the next step may change the appearance of certain websites (e.g., GitHub.com) until you     disable it. You can easily disable the plugin by going to Chrome > Preferences > Extensions > Disable ModHeader.
+  **NOTE:** The Chrome plugin in the next step may change the appearance of certain websites (e.g., GitHub.com) until you     disable it. You can easily disable the plugin by going to *Chrome > Preferences > Extensions > Disable ModHeader*.
 
 2. Install this <a href="https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj/related?hl=en" target="_blank">Google Chrome plugin</a> and import this configuration: 
 
@@ -183,7 +183,7 @@ Your changes have now been deployed:
   ![image alt text](exampleapp_13.png)
 
 
-3. CD to the home-automation-example directory in the terminal, and paste this command:
+3. CD to the *home-automation-example* directory in the terminal, and paste this command:
   ```
   npm run start:dev
   ```
