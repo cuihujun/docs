@@ -36,11 +36,11 @@ Contact Exosite to have MQTT enabled for your product. Exosite will request your
 
 Create a device if you have not already done so. 
 
-1. Navigate to the *DEVICES* tab of your product and click the *NEW DEVICE* button:
+1. Navigate to the *DEVICES* tab of your product and click the "NEW DEVICE" button:
 
  ![image alt text](mqtt_1.png)
 
-2. Provide an Identity and, optionally, a Name, and click *CREATE*:
+2. Provide an *Identity* and, optionally, a *Name*, and click "CREATE":
 
  ![image alt text](mqtt_2.png)
 
@@ -115,7 +115,7 @@ Create a device if you have not already done so.
   username = 007
   password = b7b34f55e948b94841820ea50868a2490632d78f
   ```
-A successful result, as shown, activates the device and prints the credentials necessary to subsequently authenticate. You can see the device has been activated:
+A successful result, as shown, activates the device and prints the credentials necessary to subsequently authenticate. You can see the device has been "activated":
 
 ![image alt text](mqtt_4.png)
 
