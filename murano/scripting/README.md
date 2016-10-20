@@ -279,7 +279,7 @@ RAM and 64k Lua instructions.
 While memory usage is easy to reason about, a Lua instruction limit is not so clear-cut.
 If you are not sure what a Lua instruction is, intuitively you could view it as correlated to
 CPU usage, although it is not a direct correlation—in short, it represents how much work your
-script performs. Lua is a stack-based virtual machine, and it's instruction set is similar to assembly
+script performs. Lua is a stack-based virtual machine, and its instruction set is similar to assembly
 in some respects. Thus Lua instructions are primitive operations on the stack and the registers in
 each stack frame, as well as primitives for boolean logic and arithmetic. Examples of
 such instructions are: LOADNIL, LOADK, MOVE, ADD, SUB, MUL, POW, LEN, JMP, EQ, and many more.
