@@ -136,11 +136,11 @@ In this section, you will create a dashboard to view the data from the connected
 
   ![image alt text](pythonsim_16.png)
 
-6. Then add a third pane and widget. In the *WIDGET* popup that appears, select *Toggle Switch* from the *TYPE* drop-down menu and complete the remaining fields (*TITLE*: "On / Off"; *VALUE*: "datasources["state"]"; *ON VALUE*: "1"; *OFF VALUE*: "0"). Click "SAVE".
+6. Add a third pane and widget. In the *WIDGET* popup that appears, select *Toggle Switch* from the *TYPE* drop-down menu and complete the remaining fields (*TITLE*: "On / Off"; *VALUE*: "datasources["state"]"; *ON VALUE*: "1"; *OFF VALUE*: "0"). Click "SAVE".
 
   ![image alt text](pythonsim_17.png)
 
-7. Now turn the light on and off for the simulated device using the toggle switch on your dashboard. 
+7. Turn the light on and off for the simulated device using the toggle switch on your dashboard. 
 
   ![image alt text](pythonsim_18.png)
 
