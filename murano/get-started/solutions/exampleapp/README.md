@@ -123,7 +123,7 @@ Congratulations—you have connected a device to your web app and are seeing liv
   ```
   If it returns “command not found,” you may need to install pip with brew on your specific OS. 
 
-  **NOTE:** There is a known issue in OS X—if you've upgraded to El Capitan, you may need to go around the built-in system dependencies on “six” by running:
+  **NOTE:** There is a known issue in OS X—if you have upgraded to El Capitan, you may need to go around the built-in system dependencies on “six” by running:
   ```
   sudo pip install --upgrade exosite --ignore-installed six --ignore-installed prompt-toolkit --ignore-installed requests
   ```
