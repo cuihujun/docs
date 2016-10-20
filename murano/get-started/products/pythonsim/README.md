@@ -132,11 +132,11 @@ In this section, you will create a dashboard to view the data from the connected
 
   ![image alt text](pythonsim_15.png)
 
-5. Create another pane and text widget for humidity and complete the remaining fields (*Title:* "Humidity"; *Value:* "datasources["humidity"]"; *Units:* "%"). Click "SAVE."
+5. Create another pane and text widget for humidity and complete the remaining fields (*TITLE:* "Humidity"; *VALUE:* "datasources["humidity"]"; *UNITS:* "%"). Click "SAVE."
 
   ![image alt text](pythonsim_16.png)
 
-6. Then add a third pane and widget. In the *WIDGET* popup that appears, select *Toggle Switch* from the *Type* drop-down menu and complete the remaining fields (*Title*: "On / Off"; *Value*: "datasources["state"]"; *On Value*: "1"; *Off Value*: "0"). Click "SAVE".
+6. Then add a third pane and widget. In the *WIDGET* popup that appears, select *Toggle Switch* from the *TYPE* drop-down menu and complete the remaining fields (*TITLE*: "On / Off"; *VALUE*: "datasources["state"]"; *ON VALUE*: "1"; *OFF VALUE*: "0"). Click "SAVE".
 
   ![image alt text](pythonsim_17.png)
 
