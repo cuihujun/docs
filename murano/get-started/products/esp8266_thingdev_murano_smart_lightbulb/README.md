@@ -42,7 +42,7 @@ Install tools and libraries:
 
 2. Open the Arduino IDE, then install the ESP8266 Thing Dev Board board support: 
 
-    1. Select *Arduino* > *Preferences..*. 
+    1. Select *Arduino* > *Preferences...*. 
 
     2. In the *Preferences* popup that appears, paste this link into the *Additional Boards Manager URLs* field: `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
 
@@ -62,7 +62,7 @@ Install tools and libraries:
 
       ![image alt text](thingdev_3.png)
 
-    7. Next, search for "DHT". Install both the Adafruit DHT Unified and DHT sensor library.
+    7. Search for "DHT". Install both the Adafruit DHT Unified and DHT sensor library.
 
       ![image alt text](thingdev_4.png) 
 
@@ -207,7 +207,7 @@ In this section, you will create a dashboard to view the data from the connected
 
   ![image alt text](thingdev_23.png)
 
-6. Then add a third pane and widget. In the *WIDGET* popup that appears, select *Toggle Switch* from the *TYPE* drop-down menu and complete the remaining fields (*TITLE*: "On / Off"; *VALUE*: "datasources["state"]"; *ON VALUE*: "1"; *OFF VALUE*: "0"). Click "SAVE."
+6. Add a third pane and widget. In the *WIDGET* popup that appears, select *Toggle Switch* from the *TYPE* drop-down menu and complete the remaining fields (*TITLE*: "On / Off"; *VALUE*: "datasources["state"]"; *ON VALUE*: "1"; *OFF VALUE*: "0"). Click "SAVE."
 
   ![image alt text](thingdev_24.png)
 
