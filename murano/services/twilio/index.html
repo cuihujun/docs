@@ -117,27 +117,27 @@
     </div>
     <div role='flatdoc-content' class='content'><h1 id="twilio-service">Twilio Service</h1>
 <blockquote>
-<p>Make call and send sms notifications with this Twilio gateway service</p>
+<p>Make call and send SMS notifications with this Twilio gateway service.</p>
 </blockquote>
 <h3 id="operations">Operations</h3>
 <ul>
 <li><a href="#listcall">Twilio.listCall()</a>  - list calls</li>
 <li><a href="#createcall">Twilio.createCall()</a>  - create call</li>
 <li><a href="#listmessage">Twilio.listMessage()</a>  - list messages</li>
-<li><a href="#postmessage">Twilio.postMessage()</a>  - send a SMS message</li>
+<li><a href="#postmessage">Twilio.postMessage()</a>  - Send a SMS message</li>
 <li><a href="#getcall">Twilio.getCall()</a>  - get a call</li>
-<li><a href="#deletecall">Twilio.deleteCall()</a>  - delete a call</li>
+<li><a href="#deletecall">Twilio.deleteCall()</a>  - Delete a call</li>
 <li><a href="#getmessage">Twilio.getMessage()</a>  - get a message</li>
-<li><a href="#deletemessage">Twilio.deleteMessage()</a>  - delete a message</li>
+<li><a href="#deletemessage">Twilio.deleteMessage()</a>  - Delete a message</li>
 <li><a href="#listmedia">Twilio.listMedia()</a>  - list medias</li>
 <li><a href="#getmedia">Twilio.getMedia()</a>  - get a media</li>
-<li><a href="#deletemedia">Twilio.deleteMedia()</a>  - delete a media</li>
+<li><a href="#deletemedia">Twilio.deleteMedia()</a>  - Delete a media</li>
 </ul>
 <h2 id="operations">Operations</h2>
 <hr>
 <h4 id="listcall">listCall</h4>
 <blockquote>
-<p>list all calls on Twilio</p>
+<p>List all calls on Twilio.</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -206,7 +206,7 @@
 <tr>
 <td>uri</td>
 <td style="text-align:center"><em>string(uri)</em></td>
-<td>Current uri page uri</td>
+<td>Current page URI</td>
 </tr>
 <tr>
 <td>page</td>
@@ -266,7 +266,7 @@
 <tr>
 <td>calls[].price_unit</td>
 <td style="text-align:center"><em>string(ISO 4127)</em></td>
-<td>The currency in which Price is measured, in ISO 4127 format (e.g. usd, eur, jpy).</td>
+<td>The currency in which Price is measured, in ISO 4127 format (e.g., usd, eur, jpy).</td>
 </tr>
 <tr>
 <td>calls[].start_time</td>
@@ -276,7 +276,7 @@
 <tr>
 <td>calls[].account_sid</td>
 <td style="text-align:center">^[0-9a-zA-Z]{34}$</td>
-<td>The 34 character unique id of the Messaging Service you want to associate with this Message.</td>
+<td>The 34 character unique ID of the Messaging Service you want to associate with this Message.</td>
 </tr>
 <tr>
 <td>calls[].answered_by</td>
@@ -341,17 +341,17 @@
 <tr>
 <td>next_page_uri</td>
 <td style="text-align:center"><em>string,null(uri)</em></td>
-<td>Next page uri</td>
+<td>Next page URI</td>
 </tr>
 <tr>
 <td>first_page_uri</td>
 <td style="text-align:center"><em>string,null(uri)</em></td>
-<td>First page uri</td>
+<td>First page URI</td>
 </tr>
 <tr>
 <td>previous_page_uri</td>
 <td style="text-align:center"><em>string,null(uri)</em></td>
-<td>Previous page uri</td>
+<td>Previous page URI</td>
 </tr>
 </tbody>
 </table>
@@ -393,7 +393,7 @@
 <hr>
 <h4 id="createcall">createCall</h4>
 <blockquote>
-<p>make a phone call</p>
+<p>Make a phone call</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -424,22 +424,22 @@
 <tr>
 <td>Url</td>
 <td style="text-align:center"><em>string(uri)</em></td>
-<td>The fully qualified URL that should be consulted when the call connects. Just like when you set a URL on a phone number for handling inbound calls.<br />When you initiate a call through the REST API, Twilio makes a synchronous HTTP request to the URL found in the value of the &#39;Url&#39; POST parameter,<br />in order to retrieve TwiML for handling the call. This request is identical to the request Twilio sends when receiving a phone call to one of your Twilio numbers.<br />URLs must contain a valid hostname (underscores are not permitted).<br />More information: <a href="https://www.twilio.com/docs/api/twiml">https://www.twilio.com/docs/api/twiml</a></td>
+<td>The fully qualified URL that should be consulted when the call connects. Just like when you set a URL on a phone number for handling inbound calls.<br />When you initiate a call through the REST API, Twilio makes a synchronous HTTP request to the URL found in the value of the &quot;Url&quot; POST parameter,<br />in order to retrieve TwiML for handling the call. This request is identical to the request Twilio sends when receiving a phone call to one of your Twilio numbers.<br />URLs must contain a valid hostname (underscores are not permitted).<br />More information: <a href="https://www.twilio.com/docs/api/twiml">https://www.twilio.com/docs/api/twiml</a></td>
 </tr>
 <tr>
 <td><strong>From</strong></td>
 <td style="text-align:center"><em>string(E.164)</em></td>
-<td>The phone number or client identifier to use as the caller id. If using a phone number, it must be a Twilio number or a Verified outgoing caller id for your account.</td>
+<td>The phone number or client identifier to use as the caller ID. If using a phone number, it must be a Twilio number or a Verified outgoing caller ID for your account.</td>
 </tr>
 <tr>
 <td>Method</td>
 <td style="text-align:center">&quot;GET&quot;, &quot;PUT&quot;, &quot;POST&quot;</td>
-<td>The HTTP method Twilio should use when making its request to the above Url parameter&#39;s value.</td>
+<td>The HTTP method Twilio should use when making its request to the above URL parameter&#39;s value.</td>
 </tr>
 <tr>
 <td>Record</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Set this parameter to &#39;true&#39; to record the entirety of a phone call. The RecordingUrl will be sent to the StatusCallback URL.</td>
+<td>Set this parameter to &quot;true&quot; to record the entirety of a phone call. The RecordingUrl will be sent to the StatusCallback URL.</td>
 </tr>
 <tr>
 <td>Timeout</td>
@@ -459,7 +459,7 @@
 <tr>
 <td>FallbackUrl</td>
 <td style="text-align:center"><em>string(uri)</em></td>
-<td>A URL that Twilio will request if an error occurs requesting or executing the TwiML at Url.</td>
+<td>A URL that Twilio will request if an error occurs requesting or executing the TwiML at URL.</td>
 </tr>
 <tr>
 <td>ApplicationSid</td>
@@ -547,7 +547,7 @@
 <tr>
 <td>price_unit</td>
 <td style="text-align:center"><em>string(ISO 4127)</em></td>
-<td>The currency in which Price is measured, in ISO 4127 format (e.g. usd, eur, jpy).</td>
+<td>The currency in which Price is measured, in ISO 4127 format (e.g., usd, eur, jpy).</td>
 </tr>
 <tr>
 <td>start_time</td>
@@ -557,7 +557,7 @@
 <tr>
 <td>account_sid</td>
 <td style="text-align:center">^[0-9a-zA-Z]{34}$</td>
-<td>The 34 character unique id of the Messaging Service you want to associate with this Message.</td>
+<td>The 34 character unique ID of the Messaging Service you want to associate with this Message.</td>
 </tr>
 <tr>
 <td>answered_by</td>
@@ -659,7 +659,7 @@ local out = Twilio.createCall({
 <hr>
 <h4 id="listmessage">listMessage</h4>
 <blockquote>
-<p>list all SMS message on Twilio</p>
+<p>List all SMS messages on Twilio</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -718,7 +718,7 @@ local out = Twilio.createCall({
 <tr>
 <td>uri</td>
 <td style="text-align:center"><em>string(uri)</em></td>
-<td>Current uri page uri</td>
+<td>Current page URI</td>
 </tr>
 <tr>
 <td>page</td>
@@ -788,12 +788,12 @@ local out = Twilio.createCall({
 <tr>
 <td>messages[].price_unit</td>
 <td style="text-align:center"><em>string(ISO 4127)</em></td>
-<td>The currency in which Price is measured, in ISO 4127 format (e.g. usd, eur, jpy).</td>
+<td>The currency in which Price is measured, in ISO 4127 format (e.g., usd, eur, jpy).</td>
 </tr>
 <tr>
 <td>messages[].account_sid</td>
 <td style="text-align:center">^[0-9a-zA-Z]{34}$</td>
-<td>The 34 character unique id of the Messaging Service you want to associate with this Message.</td>
+<td>The 34 character unique ID of the Messaging Service you want to associate with this Message.</td>
 </tr>
 <tr>
 <td>messages[].api_version</td>
@@ -828,7 +828,7 @@ local out = Twilio.createCall({
 <tr>
 <td>messages[].MessagingServiceSid</td>
 <td style="text-align:center">^[0-9a-zA-Z]{34}$</td>
-<td>The unique id of the Messaging Service used with the message.</td>
+<td>The unique ID of the Messaging Service used with the message.</td>
 </tr>
 <tr>
 <td>page_size</td>
@@ -838,17 +838,17 @@ local out = Twilio.createCall({
 <tr>
 <td>next_page_uri</td>
 <td style="text-align:center"><em>string,null(uri)</em></td>
-<td>Next page uri</td>
+<td>Next page URI</td>
 </tr>
 <tr>
 <td>first_page_uri</td>
 <td style="text-align:center"><em>string,null(uri)</em></td>
-<td>First page uri</td>
+<td>First page URI</td>
 </tr>
 <tr>
 <td>previous_page_uri</td>
 <td style="text-align:center"><em>string,null(uri)</em></td>
-<td>Previous page uri</td>
+<td>Previous page URI</td>
 </tr>
 </tbody>
 </table>
@@ -890,7 +890,7 @@ local out = Twilio.createCall({
 <hr>
 <h4 id="postmessage">postMessage</h4>
 <blockquote>
-<p>send a SMS message</p>
+<p>Send a SMS message</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -916,7 +916,7 @@ local out = Twilio.createCall({
 <tr>
 <td><strong>To</strong></td>
 <td style="text-align:center"><em>string(E.164)</em></td>
-<td>The destination phone number. Format with a &#39;+&#39; and country code e.g., +16175551212 (E.164 format).</td>
+<td>The destination phone number. Format with a &quot;+&quot; and country code e.g., +16175551212 (E.164 format).</td>
 </tr>
 <tr>
 <td>Body</td>
@@ -941,7 +941,7 @@ local out = Twilio.createCall({
 <tr>
 <td>ApplicationSid</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Wilio will POST MessageSid as well as MessageStatus=sent or MessageStatus=failed to the URL in the MessageStatusCallback property of this Application</td>
+<td>Twilio will POST MessageSid as well as MessageStatus=sent or MessageStatus=failed to the URL in the MessageStatusCallback property of this Application</td>
 </tr>
 <tr>
 <td>StatusCallback</td>
@@ -951,7 +951,7 @@ local out = Twilio.createCall({
 <tr>
 <td>MessagingServiceSid</td>
 <td style="text-align:center">^[0-9a-zA-Z]{34}$</td>
-<td>The 34 character unique id of the Messaging Service you want to associate with this Message.</td>
+<td>The 34 character unique ID of the Messaging Service you want to associate with this Message.</td>
 </tr>
 </tbody>
 </table>
@@ -1024,12 +1024,12 @@ local out = Twilio.createCall({
 <tr>
 <td>price_unit</td>
 <td style="text-align:center"><em>string(ISO 4127)</em></td>
-<td>The currency in which Price is measured, in ISO 4127 format (e.g. usd, eur, jpy).</td>
+<td>The currency in which Price is measured, in ISO 4127 format (e.g., usd, eur, jpy).</td>
 </tr>
 <tr>
 <td>account_sid</td>
 <td style="text-align:center">^[0-9a-zA-Z]{34}$</td>
-<td>The 34 character unique id of the Messaging Service you want to associate with this Message.</td>
+<td>The 34 character unique ID of the Messaging Service you want to associate with this Message.</td>
 </tr>
 <tr>
 <td>api_version</td>
@@ -1064,7 +1064,7 @@ local out = Twilio.createCall({
 <tr>
 <td>MessagingServiceSid</td>
 <td style="text-align:center">^[0-9a-zA-Z]{34}$</td>
-<td>The unique id of the Messaging Service used with the message.</td>
+<td>The unique ID of the Messaging Service used with the message.</td>
 </tr>
 </tbody>
 </table>
@@ -1111,7 +1111,7 @@ local out = Twilio.postMessage({
 <hr>
 <h4 id="getcall">getCall</h4>
 <blockquote>
-<p>returns the call details</p>
+<p>Returns the call details</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -1195,7 +1195,7 @@ local out = Twilio.postMessage({
 <tr>
 <td>price_unit</td>
 <td style="text-align:center"><em>string(ISO 4127)</em></td>
-<td>The currency in which Price is measured, in ISO 4127 format (e.g. usd, eur, jpy).</td>
+<td>The currency in which Price is measured, in ISO 4127 format (e.g., usd, eur, jpy).</td>
 </tr>
 <tr>
 <td>start_time</td>
@@ -1205,7 +1205,7 @@ local out = Twilio.postMessage({
 <tr>
 <td>account_sid</td>
 <td style="text-align:center">^[0-9a-zA-Z]{34}$</td>
-<td>The 34 character unique id of the Messaging Service you want to associate with this Message.</td>
+<td>The 34 character unique ID of the Messaging Service you want to associate with this Message.</td>
 </tr>
 <tr>
 <td>answered_by</td>
@@ -1304,7 +1304,7 @@ local out = Twilio.postMessage({
 <hr>
 <h4 id="deletecall">deleteCall</h4>
 <blockquote>
-<p>detete a call</p>
+<p>Delete a call</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -1331,6 +1331,7 @@ local out = Twilio.postMessage({
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="call-deleted-nil-">Call deleted  -  <em>nil</em></h6>
+<p>Call deleted</p>
 <h6 id="request-error-object-">Request error  -  <em>object</em></h6>
 <table>
 <thead>
@@ -1371,7 +1372,7 @@ local out = Twilio.postMessage({
 <hr>
 <h4 id="getmessage">getMessage</h4>
 <blockquote>
-<p>returns the message details</p>
+<p>Returns the message details</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -1465,12 +1466,12 @@ local out = Twilio.postMessage({
 <tr>
 <td>price_unit</td>
 <td style="text-align:center"><em>string(ISO 4127)</em></td>
-<td>The currency in which Price is measured, in ISO 4127 format (e.g. usd, eur, jpy).</td>
+<td>The currency in which Price is measured, in ISO 4127 format (e.g., usd, eur, jpy).</td>
 </tr>
 <tr>
 <td>account_sid</td>
 <td style="text-align:center">^[0-9a-zA-Z]{34}$</td>
-<td>The 34 character unique id of the Messaging Service you want to associate with this Message.</td>
+<td>The 34 character unique ID of the Messaging Service you want to associate with this Message.</td>
 </tr>
 <tr>
 <td>api_version</td>
@@ -1505,7 +1506,7 @@ local out = Twilio.postMessage({
 <tr>
 <td>MessagingServiceSid</td>
 <td style="text-align:center">^[0-9a-zA-Z]{34}$</td>
-<td>The unique id of the Messaging Service used with the message.</td>
+<td>The unique ID of the Messaging Service used with the message.</td>
 </tr>
 </tbody>
 </table>
@@ -1549,7 +1550,7 @@ local out = Twilio.postMessage({
 <hr>
 <h4 id="deletemessage">deleteMessage</h4>
 <blockquote>
-<p>detete a message</p>
+<p>Delete a message</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -1576,6 +1577,7 @@ local out = Twilio.postMessage({
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="message-deleted-nil-">Message deleted  -  <em>nil</em></h6>
+<p>Message deleted</p>
 <h6 id="request-error-object-">Request error  -  <em>object</em></h6>
 <table>
 <thead>
@@ -1616,7 +1618,7 @@ local out = Twilio.postMessage({
 <hr>
 <h4 id="listmedia">listMedia</h4>
 <blockquote>
-<p>list all SMS media on Twilio</p>
+<p>List all SMS media on Twilio</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -1665,7 +1667,7 @@ local out = Twilio.postMessage({
 <tr>
 <td>uri</td>
 <td style="text-align:center"><em>string(uri)</em></td>
-<td>Current uri page uri</td>
+<td>Current page URI</td>
 </tr>
 <tr>
 <td>page</td>
@@ -1695,12 +1697,12 @@ local out = Twilio.postMessage({
 <tr>
 <td>media_list[].parent_sid</td>
 <td style="text-align:center">^[0-9a-zA-Z]{34}$</td>
-<td>The uniqe id of the resource that created the media.</td>
+<td>The uniqe ID of the resource that created the media.</td>
 </tr>
 <tr>
 <td>media_list[].account_sid</td>
 <td style="text-align:center">^[0-9a-zA-Z]{34}$</td>
-<td>The 34 character unique id of the Messaging Service you want to associate with this Media.</td>
+<td>The 34 character unique ID of the Messaging Service you want to associate with this Media.</td>
 </tr>
 <tr>
 <td>media_list[].content_type</td>
@@ -1720,17 +1722,17 @@ local out = Twilio.postMessage({
 <tr>
 <td>next_page_uri</td>
 <td style="text-align:center"><em>string,null(uri)</em></td>
-<td>Next page uri</td>
+<td>Next page URI</td>
 </tr>
 <tr>
 <td>first_page_uri</td>
 <td style="text-align:center"><em>string,null(uri)</em></td>
-<td>First page uri</td>
+<td>First page URI</td>
 </tr>
 <tr>
 <td>previous_page_uri</td>
 <td style="text-align:center"><em>string,null(uri)</em></td>
-<td>Previous page uri</td>
+<td>Previous page URI</td>
 </tr>
 </tbody>
 </table>
@@ -1774,7 +1776,7 @@ local out = Twilio.postMessage({
 <hr>
 <h4 id="getmedia">getMedia</h4>
 <blockquote>
-<p>returns the media details</p>
+<p>Returns the media details</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -1823,12 +1825,12 @@ local out = Twilio.postMessage({
 <tr>
 <td>parent_sid</td>
 <td style="text-align:center">^[0-9a-zA-Z]{34}$</td>
-<td>The uniqe id of the resource that created the media.</td>
+<td>The uniqe ID of the resource that created the media.</td>
 </tr>
 <tr>
 <td>account_sid</td>
 <td style="text-align:center">^[0-9a-zA-Z]{34}$</td>
-<td>The 34 character unique id of the Messaging Service you want to associate with this Media.</td>
+<td>The 34 character unique ID of the Messaging Service you want to associate with this Media.</td>
 </tr>
 <tr>
 <td>content_type</td>
@@ -1885,7 +1887,7 @@ local out = Twilio.postMessage({
 <hr>
 <h4 id="deletemedia">deleteMedia</h4>
 <blockquote>
-<p>detete a media</p>
+<p>Delete a media</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -1912,6 +1914,7 @@ local out = Twilio.postMessage({
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="media-deleted-nil-">Media deleted  -  <em>nil</em></h6>
+<p>Media deleted</p>
 <h6 id="request-error-object-">Request error  -  <em>object</em></h6>
 <table>
 <thead>

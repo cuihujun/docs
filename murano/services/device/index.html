@@ -117,14 +117,15 @@
     </div>
     <div role='flatdoc-content' class='content'><h1 id="device-gateway-service">Device Gateway Service</h1>
 <blockquote>
-<p>API allowing communication with IoT devices</p>
+<p>API allowing communication with IoT devices.</p>
 </blockquote>
 <h3 id="operations">Operations</h3>
 <ul>
-<li><a href="#productinfo">Device.productInfo()</a>  - get product information</li>
-<li><a href="#list">Device.list()</a> </li>
-<li><a href="#write">Device.write()</a>  - write data to a device</li>
-<li><a href="#rpccall">Device.rpcCall()</a>  - proxies One Platform RPC API</li>
+<li><a href="#productinfo">Device.productInfo()</a>  - Get product information.</li>
+<li><a href="#list">Device.list()</a>  - Get the list of devices for a product.</li>
+<li><a href="#write">Device.write()</a>  - Write data to a device.</li>
+<li><a href="#create">Device.create()</a>  - Creates and actives a new device.</li>
+<li><a href="#rpccall">Device.rpcCall()</a>  - Proxies One Platform RPC API.</li>
 </ul>
 <h3 id="events">Events</h3>
 <ul>
@@ -150,7 +151,7 @@
 <tr>
 <td><strong>pid</strong></td>
 <td style="text-align:center"><em>string</em></td>
-<td>Product Id</td>
+<td>Product ID</td>
 </tr>
 </tbody>
 </table>
@@ -190,7 +191,7 @@
 <hr>
 <h4 id="list">list</h4>
 <blockquote>
-<p>Returns list of devices for a given product. By default only 50 devices are returned. You can fetch up-to 100 devices per call.</p>
+<p>Returns list of devices for a given product. By default, only 50 devices are returned. You can fetch up to 100 devices per call.</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -206,7 +207,7 @@
 <tr>
 <td><strong>pid</strong></td>
 <td style="text-align:center"><em>string</em></td>
-<td>Product Id.</td>
+<td>Product ID</td>
 </tr>
 <tr>
 <td>offset</td>
@@ -222,6 +223,7 @@
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="list-of-devices-of-this-product-array-">List of devices of this product.  -  <em>array</em></h6>
+<p>List of devices of this product.</p>
 <h5 id="example">Example</h5>
 <pre><code class="lang-lua">local devices = Device.list({ pid=&quot;xxxxxxxxxxxxx&quot; }) for k,device in pairs(devices) do
   print(device.sn)
@@ -246,7 +248,7 @@ end
 <tr>
 <td><strong>pid</strong></td>
 <td style="text-align:center"><em>string</em></td>
-<td>Product Id</td>
+<td>Product ID</td>
 </tr>
 <tr>
 <td><strong>device_sn</strong></td>
@@ -257,6 +259,7 @@ end
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="todo-nil-">TODO  -  <em>nil</em></h6>
+<p>TODO</p>
 <h5 id="example">Example</h5>
 <pre><code class="lang-lua">return Device.write({
   pid=&quot;xxxxxxxxxxxxx&quot;,
@@ -265,9 +268,9 @@ end
 })
 </code></pre>
 <hr>
-<h4 id="rpccall">rpcCall</h4>
+<h4 id="create">create</h4>
 <blockquote>
-<p>Convert the Product Id ({pid}) to its CIK, add the CIK as the rpc auth object, and forward the request.<br/><br/>See <a href="http://docs.exosite.com/rpc/">http://docs.exosite.com/rpc/</a> for argument and response details.</p>
+<p>Creates a device with the given serial number (assumed not to exist)<br/><br/>Enables the serial number<br/><br/>Returns the client resource id of the new serial number.</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -283,12 +286,49 @@ end
 <tr>
 <td><strong>pid</strong></td>
 <td style="text-align:center"><em>string</em></td>
-<td>Product Id, need to be found in Product Id list of solution service config for access rights.</td>
+<td>Product ID</td>
+</tr>
+<tr>
+<td><strong>device_sn</strong></td>
+<td style="text-align:center"><em>string</em></td>
+<td>Device serial number</td>
+</tr>
+</tbody>
+</table>
+<h5 id="responses">Responses</h5>
+<h6 id="the-client-resource-id-string-">The client resource ID  -  <em>string</em></h6>
+<p>The client resource ID</p>
+<h5 id="example">Example</h5>
+<pre><code class="lang-lua">return Device.create({
+  pid=&quot;xxxxxxxxxxxxx&quot;,
+  [&quot;device_sn&quot;]=&quot;1&quot;
+})
+</code></pre>
+<hr>
+<h4 id="rpccall">rpcCall</h4>
+<blockquote>
+<p>Convert the Product ID ({pid}) to its CIK, add the CIK as the rpc auth object, and forward the request.<br/><br/>See <a href="http://docs.exosite.com/rpc/">http://docs.exosite.com/rpc/</a> for argument and response details.</p>
+</blockquote>
+<h5 id="arguments">Arguments</h5>
+<h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>pid</strong></td>
+<td style="text-align:center"><em>string</em></td>
+<td>Product ID: needs to be found in Product ID list of solution service config for access rights.</td>
 </tr>
 <tr>
 <td>auth</td>
 <td style="text-align:center"><em>object</em></td>
-<td>Murano user authentication options. The request is always authenticated with the user business id.<br /> More info on <a href=\"http://docs.exosite.com/rpc/#authentication\">Murano OneP documentation page</a>.</td>
+<td>Murano user authentication options. The request is always authenticated with the user business ID.<br /> More info on <a href=\"http://docs.exosite.com/rpc/#authentication\">Murano OneP documentation page</a>.</td>
 </tr>
 <tr>
 <td>auth.client_id</td>
@@ -303,7 +343,7 @@ end
 <tr>
 <td>calls[].id</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Response mapping Id of the call, return in the response</td>
+<td>Response mapping ID of the call, return in the response</td>
 </tr>
 <tr>
 <td>calls[].<strong>arguments</strong></td>
@@ -319,6 +359,52 @@ end
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="list-of-rpc-calls-results-object-">List of RPC calls results  -  [ <em>object</em> ]</h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td style="text-align:center"><em>string</em> {..40}</td>
+<td>RPC request ID</td>
+</tr>
+<tr>
+<td>error</td>
+<td style="text-align:center"><em>object</em></td>
+<td>RPC call errors</td>
+</tr>
+<tr>
+<td>error.code</td>
+<td style="text-align:center"><em>integer</em></td>
+<td>RPC error code</td>
+</tr>
+<tr>
+<td>error.context</td>
+<td style="text-align:center">&quot;arguments&quot;, &quot;auth&quot;, &quot;calls&quot;, &quot;procedure&quot;</td>
+<td>RPC error data</td>
+</tr>
+<tr>
+<td>error.message</td>
+<td style="text-align:center"><em>string</em></td>
+<td>RPC error message</td>
+</tr>
+<tr>
+<td>result</td>
+<td style="text-align:center"><em>array</em></td>
+<td>RPC arguments, defined by the RPC call</td>
+</tr>
+<tr>
+<td>status</td>
+<td style="text-align:center">&quot;ok&quot;, &quot;fail&quot;</td>
+<td>RPC call status</td>
+</tr>
+</tbody>
+</table>
 <h2 id="events">Events</h2>
 <hr>
 <h4 id="datapoint">datapoint</h4>
@@ -345,7 +431,7 @@ More information about how to send data to the OneP API on <a href="http://docs.
 <tr>
 <td>pid</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Device Product Id</td>
+<td>Device Product ID</td>
 </tr>
 <tr>
 <td>rid</td>
@@ -365,17 +451,17 @@ More information about how to send data to the OneP API on <a href="http://docs.
 <tr>
 <td>value</td>
 <td style="text-align:center">[ <em>integer</em><br /> or <em>number</em><br /> or <em>string</em> ] {..2}</td>
-<td>Data transmitted by the device.<br /> If api == write, the first value is &#39;live&#39;,<br /> If api == record, the first value is the event timestamp as integer.<br /> The second value is always the data transmitted, either number or string.</td>
+<td>Data transmitted by the device.<br /> If API == write, the first value is &quot;live&quot;,<br /> If API == record, the first value is the event timestamp as integer.<br /> The second value is always the data transmitted, either number or string.</td>
 </tr>
 <tr>
 <td>device_sn</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Device Serial number</td>
+<td>Device serial number</td>
 </tr>
 <tr>
 <td>source_ip</td>
 <td style="text-align:center"><em>string</em></td>
-<td>The device source ip</td>
+<td>The device source IP</td>
 </tr>
 <tr>
 <td>timestamp</td>

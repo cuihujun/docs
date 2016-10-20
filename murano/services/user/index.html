@@ -175,6 +175,32 @@
 </blockquote>
 <h5 id="responses">Responses</h5>
 <h6 id="list-of-roles-object-">List of roles  -  [ <em>object</em> ]</h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>role_id</td>
+<td style="text-align:center">^[A-Za-z0-9\-_]{1,80}$</td>
+<td>Case-insensitive unique ID in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+</tr>
+<tr>
+<td>parameter</td>
+<td style="text-align:center">[ <em>object</em> ]</td>
+<td>List of role parameter definition</td>
+</tr>
+<tr>
+<td>parameter[].name</td>
+<td style="text-align:center">^[A-Za-z]{1,40}$</td>
+<td>Case-insensitive unique name in roles parameters. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+</tr>
+</tbody>
+</table>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -188,12 +214,12 @@
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -219,7 +245,7 @@
 <tr>
 <td>role_id</td>
 <td style="text-align:center">^[A-Za-z0-9\-_]{1,80}$</td>
-<td>Case-insensitive unique id in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+<td>Case-insensitive unique ID in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
 </tr>
 <tr>
 <td>parameter</td>
@@ -247,7 +273,7 @@
 <tr>
 <td>role_id</td>
 <td style="text-align:center">^[A-Za-z0-9\-_]{1,80}$</td>
-<td>Case-insensitive unique id in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+<td>Case-insensitive unique ID in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
 </tr>
 <tr>
 <td>parameter</td>
@@ -274,12 +300,12 @@
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -322,6 +348,42 @@ response.message = User.createRole(role)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="list-of-users-object-">List of users  -  [ <em>object</em> ]</h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td style="text-align:center"><em>integer</em></td>
+<td>User unique ID</td>
+</tr>
+<tr>
+<td>name</td>
+<td style="text-align:center"><em>string</em></td>
+<td>User name</td>
+</tr>
+<tr>
+<td>email</td>
+<td style="text-align:center"><em>string(email)</em></td>
+<td>User email</td>
+</tr>
+<tr>
+<td>status</td>
+<td style="text-align:center"><em>integer</em></td>
+<td>User status</td>
+</tr>
+<tr>
+<td>creation_date</td>
+<td style="text-align:center"><em>integer</em></td>
+<td>Creation timestamp</td>
+</tr>
+</tbody>
+</table>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -335,12 +397,12 @@ response.message = User.createRole(role)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -353,7 +415,7 @@ response.message = User.listUsers(parameters)
 <hr>
 <h4 id="createuser">createUser</h4>
 <blockquote>
-<p>Creates a new user</p>
+<p>Creates a new user.</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -385,6 +447,7 @@ response.message = User.listUsers(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="activation-code-for-the-created-user-string-">Activation code for the created user  -  <em>string</em></h6>
+<p>Activation code for the created user</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -398,12 +461,12 @@ response.message = User.listUsers(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -422,6 +485,42 @@ response.message = User.createUser(user)
 </blockquote>
 <h5 id="responses">Responses</h5>
 <h6 id="list-of-socials-object-">List of socials  -  [ <em>object</em> ]</h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scope</td>
+<td style="text-align:center">[ <em>string</em> ]</td>
+<td>Specifies the level of access that the application is requesting</td>
+</tr>
+<tr>
+<td>consumer</td>
+<td style="text-align:center"><em>string</em></td>
+<td>Consumer name</td>
+</tr>
+<tr>
+<td>redirect</td>
+<td style="text-align:center"><em>string</em></td>
+<td>Redirect URI or Callback URL</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td style="text-align:center"><em>string</em></td>
+<td>Client Identifier</td>
+</tr>
+<tr>
+<td>client_secret</td>
+<td style="text-align:center"><em>string</em></td>
+<td>Client Authentication</td>
+</tr>
+</tbody>
+</table>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -435,12 +534,12 @@ response.message = User.createUser(user)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -541,12 +640,12 @@ response.message = User.createUser(user)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -597,7 +696,7 @@ response.message = User.createSocial(new_social)
 <tr>
 <td>id</td>
 <td style="text-align:center"><em>integer</em></td>
-<td>User unique id</td>
+<td>User unique ID</td>
 </tr>
 <tr>
 <td>name</td>
@@ -634,12 +733,12 @@ response.message = User.createSocial(new_social)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -680,7 +779,7 @@ response.message = User.createSocial(new_social)
 <tr>
 <td>id</td>
 <td style="text-align:center"><em>integer</em></td>
-<td>User unique id</td>
+<td>User unique ID</td>
 </tr>
 <tr>
 <td>name</td>
@@ -717,12 +816,12 @@ response.message = User.createSocial(new_social)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -786,7 +885,7 @@ response.message = User.createSocial(new_social)
 <tr>
 <td>id</td>
 <td style="text-align:center"><em>integer</em></td>
-<td>User unique id</td>
+<td>User unique ID</td>
 </tr>
 <tr>
 <td>name</td>
@@ -823,12 +922,12 @@ response.message = User.createSocial(new_social)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -864,6 +963,7 @@ response.message = User.updateUser(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="deletion-successful-nil-">Deletion successful  -  <em>nil</em></h6>
+<p>Deletion successful</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -877,12 +977,12 @@ response.message = User.updateUser(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -899,6 +999,27 @@ response.message = User.deleteUser(parameters)
 </blockquote>
 <h5 id="responses">Responses</h5>
 <h6 id="list-of-permissions-object-">List of Permissions  -  [ <em>object</em> ]</h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>method</td>
+<td style="text-align:center">^[A-Z]{1,10}$</td>
+<td>Http method of the endpoint</td>
+</tr>
+<tr>
+<td>end_point</td>
+<td style="text-align:center">^[A-Za-z0-9\-\/_{}]{1,150}$</td>
+<td>Endpoint path.</td>
+</tr>
+</tbody>
+</table>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -912,12 +1033,12 @@ response.message = User.deleteUser(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -988,12 +1109,12 @@ response.message = User.deleteUser(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -1034,6 +1155,7 @@ response.message = User.createPermission(permission)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="user-authentication-token-string-">User authentication token  -  <em>string</em></h6>
+<p>User authentication token</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -1047,12 +1169,12 @@ response.message = User.createPermission(permission)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -1087,7 +1209,8 @@ response.message = User.getUserToken(parameters)
 </tbody>
 </table>
 <h5 id="responses">Responses</h5>
-<h6 id="-ok-if-activation-successful-ok-">&#39;OK&#39; if activation successful  -  &quot;OK&quot;</h6>
+<h6 id="-ok-if-activation-successful-ok-">&quot;OK&quot; if activation successful  -  &quot;OK&quot;</h6>
+<p>&quot;OK&quot; if activation successful</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -1101,12 +1224,12 @@ response.message = User.getUserToken(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -1153,7 +1276,7 @@ response.message = User.activateUser(parameters)
 <tr>
 <td>role_id</td>
 <td style="text-align:center">^[A-Za-z0-9\-_]{1,80}$</td>
-<td>Case-insensitive unique id in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+<td>Case-insensitive unique ID in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
 </tr>
 <tr>
 <td>parameter</td>
@@ -1180,12 +1303,12 @@ response.message = User.activateUser(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -1220,6 +1343,7 @@ response.message = User.getRole(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="deletion-successful-nil-">Deletion successful  -  <em>nil</em></h6>
+<p>Deletion successful</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -1233,12 +1357,12 @@ response.message = User.getRole(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -1273,6 +1397,37 @@ response.message = User.deleteRole(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="list-of-user-roles-object-">List of user roles  -  [ <em>object</em> ]</h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>role_id</td>
+<td style="text-align:center">^[A-Za-z0-9\-_]{1,80}$</td>
+<td>Case-insensitive unique ID in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+</tr>
+<tr>
+<td>parameters</td>
+<td style="text-align:center">[ <em>object</em> ]</td>
+<td>List role parameters</td>
+</tr>
+<tr>
+<td>parameters[].name</td>
+<td style="text-align:center">^[A-Za-z]{1,40}$</td>
+<td>Case-insensitive unique name in roles parameters. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+</tr>
+<tr>
+<td>parameters[].value</td>
+<td style="text-align:center">^[A-Za-z0-9]{1,100}$</td>
+<td>Parameter value, type might be string or object.</td>
+</tr>
+</tbody>
+</table>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -1286,12 +1441,12 @@ response.message = User.deleteRole(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -1327,7 +1482,7 @@ response.message = User.deleteRole(parameters)
 <tr>
 <td>roles[].role_id</td>
 <td style="text-align:center">^[A-Za-z0-9\-_]{1,80}$</td>
-<td>Case-insensitive unique id in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+<td>Case-insensitive unique ID in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
 </tr>
 <tr>
 <td>roles[].parameters</td>
@@ -1348,6 +1503,37 @@ response.message = User.deleteRole(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="list-of-user-roles-object-">List of user roles  -  [ <em>object</em> ]</h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>role_id</td>
+<td style="text-align:center">^[A-Za-z0-9\-_]{1,80}$</td>
+<td>Case-insensitive unique ID in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+</tr>
+<tr>
+<td>parameters</td>
+<td style="text-align:center">[ <em>object</em> ]</td>
+<td>List role parameters</td>
+</tr>
+<tr>
+<td>parameters[].name</td>
+<td style="text-align:center">^[A-Za-z]{1,40}$</td>
+<td>Case-insensitive unique name in roles parameters. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+</tr>
+<tr>
+<td>parameters[].value</td>
+<td style="text-align:center">^[A-Za-z0-9]{1,100}$</td>
+<td>Parameter value, type might be string or object.</td>
+</tr>
+</tbody>
+</table>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -1361,12 +1547,12 @@ response.message = User.deleteRole(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -1478,12 +1664,12 @@ response.message = User.assignUser(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -1496,7 +1682,7 @@ response.message = User.getSocial(parameters)
 <hr>
 <h4 id="updatesocial">updateSocial</h4>
 <blockquote>
-<p>Update an Social definition.</p>
+<p>Update a social definition.</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -1538,6 +1724,7 @@ response.message = User.getSocial(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="instance-updated-nil-">Instance updated  -  <em>nil</em></h6>
+<p>Instance updated</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -1551,12 +1738,12 @@ response.message = User.getSocial(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -1592,6 +1779,7 @@ response.message = User.updateSocial(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="social-deleted-nil-">Social deleted  -  <em>nil</em></h6>
+<p>Social deleted</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -1605,12 +1793,12 @@ response.message = User.updateSocial(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -1672,12 +1860,12 @@ response.message = User.deleteSocial(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -1739,12 +1927,12 @@ response.message = User.listUserData(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -1808,12 +1996,12 @@ response.message = User.updateUserData(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -1881,12 +2069,12 @@ response.message = User.createUserData(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -1921,7 +2109,8 @@ response.message = User.deleteUserData(parameters)
 </tbody>
 </table>
 <h5 id="responses">Responses</h5>
-<h6 id="list-of-user-id-integer-">List of user id  -  [ <em>integer</em> ]</h6>
+<h6 id="list-of-user-id-integer-">List of user ID  -  [ <em>integer</em> ]</h6>
+<p>List of user ID</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -1935,12 +2124,12 @@ response.message = User.deleteUserData(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -1975,6 +2164,7 @@ response.message = User.listRoleUsers(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="deletion-successful-nil-">Deletion successful  -  <em>nil</em></h6>
+<p>Deletion successful</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -1988,12 +2178,12 @@ response.message = User.listRoleUsers(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -2006,7 +2196,7 @@ response.message = User.deletePerm(parameters)
 <hr>
 <h4 id="getsocialloginurl">getSocialLoginUrl</h4>
 <blockquote>
-<p>Get social login url.</p>
+<p>Get social login URL.</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -2033,6 +2223,7 @@ response.message = User.deletePerm(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="consumer-login-url-string-">Consumer login url  -  <em>string</em></h6>
+<p>Consumer login url</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -2046,12 +2237,12 @@ response.message = User.deletePerm(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -2111,6 +2302,7 @@ response.headers[&quot;location&quot;] = User.getSocialLoginUrl(parameters) -- r
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="social-token-string-">Social token  -  <em>string</em></h6>
+<p>Social token</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -2124,12 +2316,12 @@ response.headers[&quot;location&quot;] = User.getSocialLoginUrl(parameters) -- r
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -2171,6 +2363,7 @@ response.message = User.getSocialToken(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="the-value-of-given-user-data-key-string-">The value of given user data key.  -  <em>string</em></h6>
+<p>The value of given user data key.</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -2184,12 +2377,12 @@ response.message = User.getSocialToken(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -2247,7 +2440,7 @@ response.message = User.getUserData(parameters)
 <tr>
 <td>role_id</td>
 <td style="text-align:center">^[A-Za-z0-9\-_]{1,80}$</td>
-<td>Case-insensitive unique id in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+<td>Case-insensitive unique ID in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
 </tr>
 <tr>
 <td>parameter</td>
@@ -2274,12 +2467,12 @@ response.message = User.getUserData(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -2344,6 +2537,7 @@ response.message = User.addRoleParam(parameters)
 </tbody>
 </table>
 <h6 id="resets-successfully-nil-">Resets successfully.  -  <em>nil</em></h6>
+<p>Resets successfully.</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -2357,12 +2551,12 @@ response.message = User.addRoleParam(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -2402,6 +2596,37 @@ response.message = User.addRoleParam(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="list-of-user-roles-object-">List of user roles  -  [ <em>object</em> ]</h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>role_id</td>
+<td style="text-align:center">^[A-Za-z0-9\-_]{1,80}$</td>
+<td>Case-insensitive unique ID in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+</tr>
+<tr>
+<td>parameters</td>
+<td style="text-align:center">[ <em>object</em> ]</td>
+<td>List role parameters</td>
+</tr>
+<tr>
+<td>parameters[].name</td>
+<td style="text-align:center">^[A-Za-z]{1,40}$</td>
+<td>Case-insensitive unique name in roles parameters. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+</tr>
+<tr>
+<td>parameters[].value</td>
+<td style="text-align:center">^[A-Za-z0-9]{1,100}$</td>
+<td>Parameter value, type might be string or object.</td>
+</tr>
+</tbody>
+</table>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -2415,12 +2640,12 @@ response.message = User.addRoleParam(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -2456,6 +2681,27 @@ response.message = User.deassignUser(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="list-of-permissions-object-">List of Permissions  -  [ <em>object</em> ]</h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>method</td>
+<td style="text-align:center">^[A-Z]{1,10}$</td>
+<td>Http method of the endpoint</td>
+</tr>
+<tr>
+<td>end_point</td>
+<td style="text-align:center">^[A-Za-z0-9\-\/_{}]{1,150}$</td>
+<td>Endpoint path.</td>
+</tr>
+</tbody>
+</table>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -2469,12 +2715,12 @@ response.message = User.deassignUser(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -2524,6 +2770,27 @@ response.message = User.listRolePerms(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="list-of-permissions-object-">List of Permissions  -  [ <em>object</em> ]</h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>method</td>
+<td style="text-align:center">^[A-Z]{1,10}$</td>
+<td>Http method of the endpoint</td>
+</tr>
+<tr>
+<td>end_point</td>
+<td style="text-align:center">^[A-Za-z0-9\-\/_{}]{1,150}$</td>
+<td>Endpoint path.</td>
+</tr>
+</tbody>
+</table>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -2537,12 +2804,12 @@ response.message = User.listRolePerms(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -2592,6 +2859,7 @@ response.message = User.addRolePerm(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="todo-string-">TODO  -  <em>string</em></h6>
+<p>TODO</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -2605,12 +2873,12 @@ response.message = User.addRolePerm(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -2655,7 +2923,8 @@ response.message = User.socialRequest(parameters)
 </tbody>
 </table>
 <h5 id="responses">Responses</h5>
-<h6 id="returns-ok-if-user-has-permission-ok-">Returns &#39;Ok&#39; if user has permission  -  &quot;OK&quot;</h6>
+<h6 id="returns-ok-if-user-has-permission-ok-">Returns &quot;OK&quot; if user has permission  -  &quot;OK&quot;</h6>
+<p>Returns &quot;OK&quot; if user has permission</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -2669,12 +2938,12 @@ response.message = User.socialRequest(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -2716,6 +2985,27 @@ response.message = User.hasUserPerm(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="list-of-permissions-object-">List of Permissions  -  [ <em>object</em> ]</h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>method</td>
+<td style="text-align:center">^[A-Z]{1,10}$</td>
+<td>Http method of the endpoint</td>
+</tr>
+<tr>
+<td>end_point</td>
+<td style="text-align:center">^[A-Za-z0-9\-\/_{}]{1,150}$</td>
+<td>Endpoint path.</td>
+</tr>
+</tbody>
+</table>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -2729,12 +3019,12 @@ response.message = User.hasUserPerm(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -2787,7 +3077,7 @@ response.message = User.deleteRolePerm(parameters)
 <tr>
 <td>role_id</td>
 <td style="text-align:center">^[A-Za-z0-9\-_]{1,80}$</td>
-<td>Case-insensitive unique id in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+<td>Case-insensitive unique ID in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
 </tr>
 <tr>
 <td>parameter</td>
@@ -2814,12 +3104,12 @@ response.message = User.deleteRolePerm(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -2909,12 +3199,12 @@ response.message = User.deleteRoleParam(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -2961,6 +3251,37 @@ response.message = User.listUserRoleParamValues(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="list-of-user-roles-object-">List of user roles  -  [ <em>object</em> ]</h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>role_id</td>
+<td style="text-align:center">^[A-Za-z0-9\-_]{1,80}$</td>
+<td>Case-insensitive unique ID in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+</tr>
+<tr>
+<td>parameters</td>
+<td style="text-align:center">[ <em>object</em> ]</td>
+<td>List role parameters</td>
+</tr>
+<tr>
+<td>parameters[].name</td>
+<td style="text-align:center">^[A-Za-z]{1,40}$</td>
+<td>Case-insensitive unique name in roles parameters. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+</tr>
+<tr>
+<td>parameters[].value</td>
+<td style="text-align:center">^[A-Za-z0-9]{1,100}$</td>
+<td>Parameter value, type might be string or object.</td>
+</tr>
+</tbody>
+</table>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -2974,12 +3295,12 @@ response.message = User.listUserRoleParamValues(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -3026,6 +3347,7 @@ response.message = User.deassignUserParamName(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="list-of-user-id-integer-">List of user ID  -  [ <em>integer</em> ]</h6>
+<p>List of user ID</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -3039,12 +3361,12 @@ response.message = User.deassignUserParamName(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -3091,6 +3413,7 @@ response.message = User.listRoleParamUsers(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="deletion-successful-nil-">Deletion successful  -  <em>nil</em></h6>
+<p>Deletion successful</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -3104,12 +3427,12 @@ response.message = User.listRoleParamUsers(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -3160,7 +3483,8 @@ response.message = User.deleteRoleParamValue(parameters)
 </tbody>
 </table>
 <h5 id="responses">Responses</h5>
-<h6 id="-ok-if-user-has-role-ok-">&#39;OK&#39; if user has role  -  &quot;OK&quot;</h6>
+<h6 id="-ok-if-user-has-role-ok-">&quot;OK&quot; if user has role  -  &quot;OK&quot;</h6>
+<p>&quot;OK&quot; if user has role</p>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -3174,12 +3498,12 @@ response.message = User.deleteRoleParamValue(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>
@@ -3232,6 +3556,37 @@ response.message = User.hasUserRoleParam(parameters)
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="list-of-user-roles-object-">List of user roles  -  [ <em>object</em> ]</h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>role_id</td>
+<td style="text-align:center">^[A-Za-z0-9\-_]{1,80}$</td>
+<td>Case-insensitive unique ID in roles. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+</tr>
+<tr>
+<td>parameters</td>
+<td style="text-align:center">[ <em>object</em> ]</td>
+<td>List role parameters</td>
+</tr>
+<tr>
+<td>parameters[].name</td>
+<td style="text-align:center">^[A-Za-z]{1,40}$</td>
+<td>Case-insensitive unique name in roles parameters. Keywords: me, user(s), permission(s), role(s), parameter(s), group(s), member(s)</td>
+</tr>
+<tr>
+<td>parameters[].value</td>
+<td style="text-align:center">^[A-Za-z0-9]{1,100}$</td>
+<td>Parameter value, type might be string or object.</td>
+</tr>
+</tbody>
+</table>
 <h6 id="operation-error-details-object-">Operation error details  -  <em>object</em></h6>
 <table>
 <thead>
@@ -3245,12 +3600,12 @@ response.message = User.hasUserRoleParam(parameters)
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 <tr>
 <td>status_code</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Code</td>
+<td>Error code</td>
 </tr>
 </tbody>
 </table>

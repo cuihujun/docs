@@ -115,204 +115,22 @@
       </ul>
       <div class='menu section' role='flatdoc-menu'></div>
     </div>
-    <div role='flatdoc-content' class='content'><h1 id="email-service">Email Service</h1>
-<blockquote>
-<p>This service provides email notification by setting your SMTP relay server.<br/> If the SMTP server is omitted, the email sender is automatically set to <em>mailrelay@exosite.com</em> email address and a limited amount of email per day is allowed depending on your Murano plan.</p>
-</blockquote>
-<h3 id="operations">Operations</h3>
-<ul>
-<li><a href="#send">Email.send()</a>  - send an email</li>
-<li><a href="#getsettings">Email.getSettings()</a>  - get email settings</li>
-</ul>
-<h2 id="operations">Operations</h2>
-<hr>
-<h4 id="send">send</h4>
-<blockquote>
-<p>Send an email.<br/> If the <em>connection.server</em> attribute is omitted, the email sender is automatically set to <em>mailrelay@exosite.com</em> email address and a limited amount of email per day is allowed depending on your Murano plan.</p>
-</blockquote>
-<h5 id="arguments">Arguments</h5>
-<h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th style="text-align:center">Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cc</td>
-<td style="text-align:center">[ <em>string(email)</em> ]</td>
-<td>Carbon copy destination(s) email address(es)</td>
-</tr>
-<tr>
-<td><strong>to</strong></td>
-<td style="text-align:center">[ <em>string(email)</em> ]</td>
-<td>Destination(s) email address(es)</td>
-</tr>
-<tr>
-<td>bcc</td>
-<td style="text-align:center">[ <em>string(email)</em> ]</td>
-<td>Blind carbon copy destination(s) email address(es)</td>
-</tr>
-<tr>
-<td>from</td>
-<td style="text-align:center"><em>string(email)</em></td>
-<td>Sender email address, only available when specifying an SMTP relay server with <em>connection.server</em>.</td>
-</tr>
-<tr>
-<td>html</td>
-<td style="text-align:center"><em>string(html)</em></td>
-<td>Email message in HTML format</td>
-</tr>
-<tr>
-<td><strong>text</strong></td>
-<td style="text-align:center"><em>string</em></td>
-<td>Email message text</td>
-</tr>
-<tr>
-<td><strong>subject</strong></td>
-<td style="text-align:center"><em>string</em> {..78}</td>
-<td>Email subject</td>
-</tr>
-<tr>
-<td>connection</td>
-<td style="text-align:center"><em>object</em></td>
-<td>An SMTP connection information to avoid daily limitation and sender email restriction. Gmail user will need to activate the &quot;lesssecureapps&quot; mode on <a href="https://support.google.com/accounts/answer/6010255">https://support.google.com/accounts/answer/6010255</a>.</td>
-</tr>
-<tr>
-<td>connection.port</td>
-<td style="text-align:center"><em>integer</em></td>
-<td>The SMTP server port</td>
-</tr>
-<tr>
-<td>connection.<strong>user</strong></td>
-<td style="text-align:center">^[^\s-]+$</td>
-<td>The SMTP server account</td>
-</tr>
-<tr>
-<td>connection.scheme</td>
-<td style="text-align:center">&quot;smtp&quot;, &quot;smtps&quot;</td>
-<td>The SMTP server</td>
-</tr>
-<tr>
-<td>connection.<strong>server</strong></td>
-<td style="text-align:center"><em>string(uri)</em></td>
-<td>The SMTP server relay URL</td>
-</tr>
-<tr>
-<td>connection.<strong>password</strong></td>
-<td style="text-align:center">^[^\s-]+$</td>
-<td>The SMTP server password</td>
-</tr>
-</tbody>
-</table>
-<h5 id="responses">Responses</h5>
-<h6 id="email-successfully-sent-nil-">Email successfully sent  -  <em>nil</em></h6>
-<p>Email successfully sent</p>
-<h6 id="daily-email-quota-reached-consider-adding-your-personal-smtp-server-or-contact-murano-team-for-upgrading-your-plan-you-can-view-your-current-email-usage-with-_getsettings_-operation-or-on-your-murano-portal-account-nil-">Daily email quota reached. Consider adding your personal SMTP server or contact Murano team for upgrading your plan. You can view your current email usage with <em>getSettings</em> operation or on your Murano portal account.  -  <em>nil</em></h6>
-<p>Daily email quota reached. Consider adding your personal SMTP server or contact Murano team for upgrading your plan. You can view your current email usage with <em>getSettings</em> operation or on your Murano portal account.</p>
-<h6 id="error-response-object-">Error response  -  <em>object</em></h6>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th style="text-align:center">Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>code</td>
-<td style="text-align:center"><em>string</em></td>
-<td>Error code</td>
-</tr>
-<tr>
-<td>message</td>
-<td style="text-align:center"><em>string</em></td>
-<td>Error message</td>
-</tr>
-</tbody>
-</table>
-<h5 id="example">Example</h5>
-<pre><code class="lang-lua">local emailData = {
-  from = &quot;me@myemail.com&quot;,
-  to = {
-    &quot;destination1@email.com&quot;,
-    &quot;destination2@email.com&quot;,
-  },
-  subject = &quot;Hello&quot;,
-  text = &quot;World&quot;,
-  html = &quot;&lt;p&gt;&lt;b&gt;World&lt;/b&gt;&lt;/p&gt;&quot;,
-  connection = {
-    server = &quot;smtp.myemail.com&quot;,
-    port = 1234,
-    user = &quot;me&quot;,
-    password = &quot;mysecret&quot;
-  }
-} response = Email.send(parameters)
-</code></pre>
-<hr>
-<h4 id="getsettings">getSettings</h4>
-<blockquote>
-<p>Get email settings, current usage, and quota. Detailed error is available in the service response.</p>
-</blockquote>
-<h5 id="responses">Responses</h5>
-<h6 id="usage-and-settings-information-for-a-given-solution-object-">Usage and settings information for a given solution  -  <em>object</em></h6>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th style="text-align:center">Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>quota</td>
-<td style="text-align:center"><em>object</em></td>
-<td>Email quota limitation for this solution, only if SMTP setting is not provided.</td>
-</tr>
-<tr>
-<td>quota.daily</td>
-<td style="text-align:center"><em>integer</em></td>
-<td>Daily quota, reset midnight UTC time.</td>
-</tr>
-<tr>
-<td>usage</td>
-<td style="text-align:center"><em>object</em></td>
-<td>Current email usage for this solution.</td>
-</tr>
-<tr>
-<td>usage.daily</td>
-<td style="text-align:center"><em>integer</em></td>
-<td>Daily usage, reset midnight UTC time.</td>
-</tr>
-</tbody>
-</table>
-<h6 id="error-response-object-">Error response  -  <em>object</em></h6>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th style="text-align:center">Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>code</td>
-<td style="text-align:center"><em>string</em></td>
-<td>Error code</td>
-</tr>
-<tr>
-<td>message</td>
-<td style="text-align:center"><em>string</em></td>
-<td>Error message</td>
-</tr>
-</tbody>
-</table>
+    <div role='flatdoc-content' class='content'><h1 id="murano-overview">Murano Overview</h1>
+<p>Murano provides a powerful IoT platform that helps organizations connect product deployments and build applications and services using secure, scalable infrastructure. </p>
+<p><a class="btn orange" href="https://exosite.com/business/signup">Murano Signup</a>
+<a class="btn orange" href="/murano/get-started">Murano Getting-Started Guides</a></p>
+<p><img src="/murano/assets/platform_overview.png" alt="murano overview image"></p>
+<h1 id="overview">Overview</h1>
+<p>The easiest way to think about the Murano platform is as a number of cloud software layers that are integrated together, simplifying the full IoT stack. Murano has taken care of the infrastructure, development, and integration of the functional layers, including device connectivity, device/product management, data routing, service integration (with services like data stores, alerting, and third-party analytics platforms), application public APIs, user auth/roles/permissions, and application asset hosting. </p>
+<p>Murano also allows integration with third-party software, allowing developers to focus on user-application-specific functionality and device applications, while achieving a faster time to market than would be possible if building a platform from scratch. </p>
+<p>Murano allows developers to build full IoT systems quickly, while maintaining the flexibility to add new features and build customizations not possible on more rigid platforms. </p>
+<h1 id="murano-features">Murano Features</h1>
+<h2 id="products">Products</h2>
+<p>The Product concept in Murano represents a connected device type. It provides tools and interfaces to manage product definitions, allowing developers to deploy a fleet of devices using a common API hostname, provisioning sequence, definition for data routing, and content for things like infield updates and configuration. Developers can quickly build devices and verify device behavior using integrated prototyping dashboards.</p>
+<h2 id="solutions">Solutions</h2>
+<p>The Solution concept in Murano represents the application logic, user interfaces, and APIs for an IoT application. It provides the tools needed to build and deploy applications and services on top of IoT device data using concepts of data routing, integrated services, custom APIs, user auth/roles/permissions, and application asset hosting. This allows developers to create solution templates that contain the entire application functionality to deploy to end users or to provide a custom API for their products.</p>
+<h1 id="help">Help</h1>
+<p>Have additional questions? Check out the <a href="https://support.exosite.com/hc/">Exosite support site</a>.</p>
 </div>
   </div>
 

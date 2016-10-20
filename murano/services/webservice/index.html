@@ -117,7 +117,7 @@
     </div>
     <div role='flatdoc-content' class='content'><h1 id="custom-api-gateway-service">Custom API Gateway Service</h1>
 <blockquote>
-<p>Custom API for communication with end-user and external client applications using <strong>HTTPS</strong> protocol.<br/> Endpoints are configured from <a href="https://www.exosite.com/business/solutions">Murano portal</a> interface under your solution routes or from exosite-cli tools.<br/> Each request reaching your API endpoints will trigger the execution of your lua script. See the <em>request</em> event for more information.</p>
+<p>Custom API for communication with end-user and external-client applications using <strong>HTTPS</strong> protocol.<br/> Endpoints are configured from <a href="https://www.exosite.com/business/solutions">Murano portal</a> interface under your solution routes or from exosite-cli tools.<br/> Each request reaching your API endpoints will trigger the execution of your lua script. See the <em>request</em> event for more information.</p>
 </blockquote>
 <h3 id="operations">Operations</h3>
 <ul>
@@ -131,7 +131,7 @@
 <hr>
 <h4 id="apireply">apiReply</h4>
 <blockquote>
-<p>Reply to a pending API HTTP request with a standard HTTP response. This operation is used after receiving a webservice <em>request</em> event.<br/> When using Murano <em>endpoint script</em> you DO NOT need to use this operation manually as the Murano webservice router already handle it for you at the end of the endpoint script execution. <br/><br/> However if you want to set you own endpoint routing mechanism you can directly edit your solution webServer request <strong>eventHandler script</strong>. In such case the <em>Webservice.apiReply</em> need to be called manually and the <em>request_id</em> and <em>service_id</em> parameters have to be provided.<br/> Important! Any <strong>endpoint script</strong> changes will reset the default routing mechanism and <strong>eventHandler script</strong> changes will be lost.</p>
+<p>Reply to a pending API HTTP request with a standard HTTP response. This operation is used after receiving a webservice <em>request</em> event.<br/> When using Murano <em>endpoint script</em>, you DO NOT need to use this operation manually as the Murano webservice router already handles it for you at the end of the endpoint script execution. <br/><br/> However, if you want to set your own endpoint routing mechanism, you can directly edit your solution webServer request <strong>eventHandler script</strong>. In such case the <em>Webservice.apiReply</em> needs to be called manually and the <em>request_id</em> and <em>service_id</em> parameters have to be provided.<br/> Important! Any <strong>endpoint script</strong> changes will reset the default routing mechanism and <strong>eventHandler script</strong> changes will be lost.</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -147,7 +147,7 @@
 <tr>
 <td><strong>request_id</strong></td>
 <td style="text-align:center"><em>string</em></td>
-<td>The request id provided in the request data. Automatically set when using Murano <em>endpoint script</em>.</td>
+<td>The request ID provided in the request data. Automatically set when using Murano <em>endpoint script</em>.</td>
 </tr>
 <tr>
 <td><strong>code</strong></td>
@@ -167,12 +167,13 @@
 <tr>
 <td>(deprecated) server_ip</td>
 <td style="text-align:center"><em>string(ipv4)</em></td>
-<td>The server ip address holding the HTTP connection. Provided in request data. Automatically set when using Murano <em>endpoint script</em>.</td>
+<td>The server IP address holding the HTTP connection. Provided in request data. Automatically set when using Murano <em>endpoint script</em>.</td>
 </tr>
 </tbody>
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="response-successfully-sent-nil-">Response successfully sent  -  <em>nil</em></h6>
+<p>Response successfully sent</p>
 <h6 id="error-response-object-">Error response  -  <em>object</em></h6>
 <table>
 <thead>
@@ -191,7 +192,7 @@
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 </tbody>
 </table>
@@ -210,7 +211,7 @@ local responseData = {
 <hr>
 <h4 id="request">request</h4>
 <blockquote>
-<p>An HTTP request has reached your custom API endpoint and triggers the webservice eventHandler script execution. This request is waiting for a response through the <em>apiReply</em> operation.<br/> All requests trigger the same eventHandler script. However for your convenience Murano provides out-of-the-box endpoint routing wrapper triggering <strong>endpoint scripts</strong>.<br/> So when writing a <strong>endpoint script</strong>, you simply use the <em>response</em> parameters or directly return the desired response body content. As the <em>apiReply</em> response is automatically made at the end of each endpoint scripts by the Murano routing wrapper. <br/><br/> However if you want to set you own endpoint routing mechanism you can directly edit your solution webServer eventHandler script. See <em>apiReply</em> operation for more information.<br/> Important! Any endpoint script changes will reset the default routing mechanism and eventHandler script changes will be lost. <br/><br/> <strong>Endpoint script default values:</strong><br/> response.code: 200 <br/> response.message: &quot;Ok&quot; <br/> response.headers[&quot;content-type&quot;] = &quot;plain/text&quot; if message is a &quot;string&quot;, &quot;application/json&quot; otherwise.</p>
+<p>An HTTP request has reached your custom API endpoint and triggers the webservice eventHandler script execution. This request is waiting for a response through the <em>apiReply</em> operation.<br/> All requests trigger the same eventHandler script. However, for your convenience, Murano provides out-of-the-box endpoint routing wrapper triggering <strong>endpoint scripts</strong>.<br/> So when writing an <strong>endpoint script</strong>, you simply use the <em>response</em> parameters or directly return the desired response body content. As the <em>apiReply</em> response is automatically made at the end of each endpoint scripts by the Murano routing wrapper. <br/><br/> However, if you want to set your own endpoint routing mechanism, you can directly edit your solution webServer eventHandler script. See <em>apiReply</em> operation for more information.<br/> Important! Any endpoint script changes will reset the default routing mechanism and eventHandler script changes will be lost. <br/><br/> <strong>Endpoint script default values:</strong><br/> response.code: 200 <br/> response.message: &quot;Ok&quot; <br/> response.headers[&quot;content-type&quot;] = &quot;plain/text&quot; if message is a &quot;string&quot;, &quot;application/json&quot; otherwise.</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="request-object-the-http-request-data-">request  -  <em>object</em>  -  <em>The HTTP request data</em></h6>
@@ -266,7 +267,7 @@ local responseData = {
 <tr>
 <td>request_id</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Unique request id use to match with the response. Only for webservice <strong>eventhandler scripts</strong> when calling <em>apiReply</em> operation.</td>
+<td>Unique request ID use to match with the response. Only for webservice <strong>eventhandler scripts</strong> when calling <em>apiReply</em> operation.</td>
 </tr>
 </tbody>
 </table>

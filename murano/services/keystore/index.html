@@ -117,7 +117,7 @@
     </div>
     <div role='flatdoc-content' class='content'><h1 id="key-value-store">Key-Value Store</h1>
 <blockquote>
-<p>A Key Value storage Service.<br/> Moreover, this service provides most of the powerful features of a <a href="http://redis.io/commands">Redis database</a>.<br/> <strong>Note:</strong> the number of keys you can use depend on your Murano plan. Use <em>list</em> operation to see your current quota and usage.</p>
+<p>A key-value storage service.<br/> Moreover, this service provides most of the powerful features of a <a href="http://redis.io/commands">Redis database</a>.<br/> <strong>Note:</strong> the number of keys you can use depend on your Murano plan. Use <em>list</em> operation to see your current quota and usage.</p>
 </blockquote>
 <h3 id="operations">Operations</h3>
 <ul>
@@ -166,6 +166,11 @@
 <td style="text-align:center"><em>integer</em></td>
 <td>Current number of keys being used by the solution namespace.</td>
 </tr>
+<tr>
+<td>usage.size</td>
+<td style="text-align:center"><em>integer</em></td>
+<td>Total data size of solution namespace in bytes.</td>
+</tr>
 </tbody>
 </table>
 <h6 id="error-response-object-">Error response  -  <em>object</em></h6>
@@ -191,7 +196,7 @@
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 </tbody>
 </table>
@@ -261,7 +266,7 @@
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 </tbody>
 </table>
@@ -271,10 +276,11 @@
 <hr>
 <h4 id="clear">clear</h4>
 <blockquote>
-<p>Remove all keys from this solution. Be care, there is no going back!</p>
+<p>Remove all keys from this solution. Be careful. There is no going back!</p>
 </blockquote>
 <h5 id="responses">Responses</h5>
 <h6 id="all-solution-keys-removed-nil-">All solution keys removed  -  <em>nil</em></h6>
+<p>All solution keys removed</p>
 <h6 id="error-response-object-">Error response  -  <em>object</em></h6>
 <table>
 <thead>
@@ -298,7 +304,7 @@
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 </tbody>
 </table>
@@ -323,8 +329,8 @@
 <tbody>
 <tr>
 <td><strong>key</strong></td>
-<td style="text-align:center">^[\w\@.-:_]+$</td>
-<td>Key id</td>
+<td style="text-align:center"><em>string</em> {1..200}</td>
+<td>Key ID</td>
 </tr>
 </tbody>
 </table>
@@ -369,7 +375,7 @@
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 </tbody>
 </table>
@@ -394,8 +400,8 @@
 <tbody>
 <tr>
 <td><strong>key</strong></td>
-<td style="text-align:center">^[\w\@.-:_]+$</td>
-<td>Key id</td>
+<td style="text-align:center"><em>string</em> {1..200}</td>
+<td>Key ID</td>
 </tr>
 <tr>
 <td><strong>value</strong></td>
@@ -406,7 +412,9 @@
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="key-successfully-set-nil-">Key successfully set  -  <em>nil</em></h6>
-<h6 id="namespace-key-count-quota-reached-delete-some-un-used-keys-or-contact-murano-team-for-upgrading-your-plan-you-can-view-your-current-namespace-usage-with-the-_list_-operation-or-on-your-murano-portal-account-nil-">Namespace, Key count quota reached. Delete some un-used keys or contact Murano team for upgrading your plan. You can view your current namespace usage with the <em>list</em> operation or on your Murano portal account.  -  <em>nil</em></h6>
+<p>Key successfully set</p>
+<h6 id="namespace-key-count-quota-reached-delete-some-unused-keys-or-contact-murano-team-for-upgrading-your-plan-you-can-view-your-current-namespace-usage-with-the-_list_-operation-or-on-your-murano-portal-account-nil-">Namespace, Key count quota reached. Delete some unused keys or contact Murano team for upgrading your plan. You can view your current namespace usage with the <em>list</em> operation or on your Murano portal account.  -  <em>nil</em></h6>
+<p>Namespace, Key count quota reached. Delete some unused keys or contact Murano team for upgrading your plan. You can view your current namespace usage with the <em>list</em> operation or on your Murano portal account.</p>
 <h6 id="error-response-object-">Error response  -  <em>object</em></h6>
 <table>
 <thead>
@@ -430,7 +438,7 @@
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 </tbody>
 </table>
@@ -440,7 +448,7 @@
 <hr>
 <h4 id="delete">delete</h4>
 <blockquote>
-<p>Remove a key-value from the store. This operation free a quota count for your namespace.</p>
+<p>Remove a key value from the store. This operation frees a quota count for your namespace.</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -455,13 +463,14 @@
 <tbody>
 <tr>
 <td><strong>key</strong></td>
-<td style="text-align:center">^[\w\@.-:_]+$</td>
-<td>Key id</td>
+<td style="text-align:center"><em>string</em> {1..200}</td>
+<td>Key ID</td>
 </tr>
 </tbody>
 </table>
 <h5 id="responses">Responses</h5>
 <h6 id="key-successfully-deleted-nil-">Key successfully deleted  -  <em>nil</em></h6>
+<p>Key successfully deleted</p>
 <h6 id="error-response-object-">Error response  -  <em>object</em></h6>
 <table>
 <thead>
@@ -485,7 +494,7 @@
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 </tbody>
 </table>
@@ -495,7 +504,7 @@
 <hr>
 <h4 id="command">command</h4>
 <blockquote>
-<p>This function offers some popular Redis commands to execute on the key. Please refere to <a href="http://redis.io/commands">http://redis.io/commands documentation page</a> for the command information and parameters. Remember, some command will increase your namespace usage and may hit your namespace quota. Not all Redis command are supported please refere to the command parameter information.</p>
+<p>This function offers some popular Redis commands to execute on the key. Please refer to <a href="http://redis.io/commands">http://redis.io/commands documentation page</a> for the command information and parameters. Remember, some commands will increase your namespace usage and may hit your namespace quota. Not all Redis commands are supported. Please refer to the command parameter information.</p>
 </blockquote>
 <h5 id="arguments">Arguments</h5>
 <h6 id="parameters-object-object-containing-service-call-parameters-">parameters  -  <em>object</em>  -  <em>Object containing service call parameters.</em></h6>
@@ -510,18 +519,18 @@
 <tbody>
 <tr>
 <td><strong>key</strong></td>
-<td style="text-align:center">^[\w\@.-:_]+$</td>
+<td style="text-align:center"><em>string</em> {1..200}</td>
 <td>Target key</td>
 </tr>
 <tr>
 <td><strong>command</strong></td>
-<td style="text-align:center">&quot;get&quot;, &quot;set&quot;, &quot;setnx&quot;, &quot;strlen&quot;, &quot;type&quot;, &quot;exists&quot;, &quot;append&quot;, &quot;incr&quot;, &quot;incrby&quot;, &quot;decr&quot;, &quot;decrby&quot;, &quot;getset&quot;, &quot;incrbyfloat&quot;, &quot;lpush&quot;, &quot;lindex&quot;, &quot;llen&quot;, &quot;linsert&quot;, &quot;lrange&quot;, &quot;lrem&quot;, &quot;lset&quot;, &quot;ltrim&quot;, &quot;rpop&quot;, &quot;rpush&quot;, &quot;sadd&quot;, &quot;srem&quot;, &quot;scard&quot;, &quot;smembers&quot;, &quot;spop&quot;, &quot;setex&quot;, &quot;psetex&quot;, &quot;expire&quot;, &quot;pexpireat&quot;, &quot;pexpire&quot;, &quot;expireat&quot;, &quot;pttl&quot;, &quot;ttl&quot;, &quot;persist&quot;</td>
-<td>This function offers some popular Redis commands to execute on the key. Please refere to <a href="http://redis.io/commands">http://redis.io/commands documentation page</a> for the command information and parameters.</td>
+<td style="text-align:center">&quot;get&quot;, &quot;set&quot;, &quot;setnx&quot;, &quot;strlen&quot;, &quot;type&quot;, &quot;exists&quot;, &quot;append&quot;, &quot;bitcount&quot;, &quot;bitpos&quot;, &quot;getbit&quot;, &quot;setbit&quot;, &quot;getrange&quot;, &quot;incr&quot;, &quot;incrby&quot;, &quot;decr&quot;, &quot;decrby&quot;, &quot;getset&quot;, &quot;incrbyfloat&quot;, &quot;lpush&quot;, &quot;lpushx&quot;, &quot;lindex&quot;, &quot;llen&quot;, &quot;linsert&quot;, &quot;lrange&quot;, &quot;lrem&quot;, &quot;lset&quot;, &quot;ltrim&quot;, &quot;rpop&quot;, &quot;rpush&quot;, &quot;rpushx&quot;, &quot;sadd&quot;, &quot;srem&quot;, &quot;scard&quot;, &quot;smembers&quot;, &quot;sismember&quot;, &quot;srandmember&quot;, &quot;spop&quot;, &quot;setex&quot;, &quot;psetex&quot;, &quot;expire&quot;, &quot;pexpireat&quot;, &quot;pexpire&quot;, &quot;expireat&quot;, &quot;pttl&quot;, &quot;ttl&quot;, &quot;persist&quot;, &quot;zadd&quot;, &quot;zcard&quot;, &quot;zcount&quot;, &quot;zincrby&quot;, &quot;zlexcount&quot;, &quot;zrange&quot;, &quot;zrangebylex&quot;, &quot;zrangebyscore&quot;, &quot;zrank&quot;, &quot;zrem&quot;, &quot;zremrangebylex&quot;, &quot;zremrangebyscore&quot;, &quot;zremrangebyrank&quot;, &quot;zrevrange&quot;, &quot;zrevrangebylex&quot;, &quot;zrevrangebyscore&quot;, &quot;zrevrank&quot;, &quot;zscore&quot;, &quot;hdel&quot;, &quot;hexists&quot;, &quot;hget&quot;, &quot;hgetall&quot;, &quot;hincrby&quot;, &quot;hincrbyfloat&quot;, &quot;hkeys&quot;, &quot;hlen&quot;, &quot;hmget&quot;, &quot;hstrlen&quot;, &quot;hvals&quot;, &quot;hscan&quot;, &quot;hset&quot;, &quot;hmset&quot;, &quot;hsetnx&quot;</td>
+<td>This function offers some popular Redis commands to execute on the key. Please refer to <a href="http://redis.io/commands">http://redis.io/commands documentation page</a> for the command information and parameters.</td>
 </tr>
 <tr>
 <td>args</td>
 <td style="text-align:center">[ <em>string</em>, <em>number</em>, <em>boolean</em> ]</td>
-<td>List of arguments for the specified command. Please refere to <a href="http://redis.io/commands">http://redis.io/commands documentation page</a> for the command information and parameters.</td>
+<td>List of arguments for the specified command. Please refer to <a href="http://redis.io/commands">http://redis.io/commands documentation page</a> for the command information and parameters.</td>
 </tr>
 </tbody>
 </table>
@@ -544,6 +553,7 @@
 </tbody>
 </table>
 <h6 id="namespace-key-count-quota-reached-delete-some-un-used-keys-or-contact-murano-team-for-upgrading-your-plan-you-can-view-your-current-namespace-usage-with-the-_list_-operation-or-on-your-murano-portal-account-nil-">Namespace, Key count quota reached. Delete some un-used keys or contact Murano team for upgrading your plan. You can view your current namespace usage with the <em>list</em> operation or on your Murano portal account.  -  <em>nil</em></h6>
+<p>Namespace, Key count quota reached. Delete some un-used keys or contact Murano team for upgrading your plan. You can view your current namespace usage with the <em>list</em> operation or on your Murano portal account.</p>
 <h6 id="error-response-object-">Error response  -  <em>object</em></h6>
 <table>
 <thead>
@@ -567,7 +577,7 @@
 <tr>
 <td>message</td>
 <td style="text-align:center"><em>string</em></td>
-<td>Error Message</td>
+<td>Error message</td>
 </tr>
 </tbody>
 </table>
