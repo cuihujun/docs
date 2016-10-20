@@ -96,7 +96,7 @@ If successful, the script will ask you to enter your Product ID.
 
 4. Press **Enter** again to use the default device identity (000001). This matches the identity of the device you added earlier, so it will activate correctly.
 
-  **NOTE:** If you've already added 000001 and simulated the device before, you may need to create a new device (e.g., 000002) and change the default identity on the simulator. This will activate a new device and simulate data for it.
+  **NOTE:** If you have already added 000001 and simulated the device before, you may need to create a new device (e.g., 000002) and change the default identity on the simulator. This will activate a new device and simulate data for it.
 
   If the Python Simulator is running correctly, the script should show the device has been activated and whether the lightbulb is on or off. 
 
@@ -144,7 +144,7 @@ In this section, you will create a dashboard to view the data from the connected
 
   ![image alt text](pythonsim_18.png)
 
-Switch to the terminal (while the simulator is running), and you’ll see the simulator indicates that it has received the state changes.
+Switch to the terminal (while the simulator is running), and you will see the simulator indicates that it has received the state changes.
 
   ![image alt text](pythonsim_19.png)
 
