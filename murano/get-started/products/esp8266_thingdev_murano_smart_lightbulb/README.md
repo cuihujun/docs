@@ -135,7 +135,7 @@ In this section, you will flash and run an example application for a connected l
 
 8. Make sure the Thing Dev Board is connected to your computer via a micro-USB cable and select your device’s serial port with *Tools* > *Port* > *"your_port"*. 
 
-  **NOTE:** Your device will likely be the only one. If it’s not, you can figure out which is correct by unplugging your device and finding which device disappears.
+  **NOTE:** Your device will likely be the only one. If it is not, you can figure out which is correct by unplugging your device and finding which device disappears.
     
     ![image alt text](thingdev_11.png)
 
@@ -211,7 +211,7 @@ In this section, you will create a dashboard to view the data from the connected
 
   ![image alt text](thingdev_24.png)
 
-7. Refresh your browser if you don't see data coming through in the Humidity and Temperature widgets. Now turn the light on and off using the toggle switch on your dashboard. You should see the LED turn on and off on the Thing Dev Board accordingly. 
+7. Refresh your browser if you do not see data coming through in the Humidity and Temperature widgets. Now turn the light on and off using the toggle switch on your dashboard. You should see the LED turn on and off on the Thing Dev Board accordingly. 
 
   ![image alt text](thingdev_25.png)
 
